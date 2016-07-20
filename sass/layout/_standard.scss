@@ -1,0 +1,132 @@
+//Design
+header{
+  @include box-shadow($color__shadow !important);
+  right: 0; left: 0; top: 0;
+  position: fixed;
+  z-index: 2;
+  width:100%;
+  height: $size__header-height;
+  background: $color__light;
+  padding:0;
+  #title{
+    float:left;
+    display:inline-block;
+    h1{
+      padding:0.2em 1em;
+      display:inline-block;
+      margin: 0;
+      clear: both;
+    }
+  }
+  button{
+    display:none;
+  }
+  nav{
+    float: left;
+    ul{
+      li{
+        float: left;
+        list-style: none;
+        a{
+          padding: 1em;
+          @include transition(background 1s);
+          &:hover, &.selected{
+            &.selected{
+              font-weight: bold;
+            }
+            background: $color__light;
+            @include box-shadow($color__shadow !important);
+            @include transition(background 1s, box-shadow 1s);
+          }
+        }
+      }
+    }
+  }
+}
+
+#content{
+  margin-top: calc( #{$size__header-height} - 0.5em );
+  position: absolute;
+  z-index: 0;
+  width: 80%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  .child{
+    margin-top:-400em;
+    padding:0 1em 1em 1em;
+    width: 100%;
+    display: inline-block;
+    background: $color__medium-light;
+    @include box-shadow($color__shadow !important);
+    @include transition(margin-top 1s);
+    &.show{
+      margin-top:0;
+      @include transition(margin-top 1s);
+    }
+  }
+  #project-tags{
+    clear: both;
+    width: 100%;
+    display: inline-block;
+    label{
+      display: inline-block;
+      padding: 0.2em;
+      /*background: $color__light;*/
+      @include border-radius( 25px);
+      input:checked{
+        &{
+          background: green;
+        }
+      }
+    }
+  }
+  .project{
+    display: none;
+    background: $color__light;
+    width: auto;
+    float:left;
+    margin: 0.5em;
+    padding: 0.5em;
+    width: calc( 100% - 1em );
+    float: left;
+    @include box-shadow($color__shadow);
+    &.show{
+      display: block;
+    }
+    .p-name{
+    }
+    .p-year{
+      float:right;
+    }
+  }
+}
+//CV
+.float-left {
+    float: left;
+    max-width: 30em;
+    margin-top: 1em;
+}
+.float-right {
+    float: right;
+}
+.portrait {
+    width: auto;
+}
+.portrait img {
+    height: auto;
+}
+.about-me-content {
+    margin-left: 2em;
+    width: 66%;
+    max-width: 66%;
+}
+.about-me-title {
+    width: 7em;
+    font-weight: bold;
+    clear: left;
+}
+.name {
+    padding: 0 0.2em 0 0;
+}

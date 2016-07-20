@@ -1,0 +1,20 @@
+<header>
+  <logo></logo>
+  <div id="title">
+    <h1>{{title}}</h1>
+  </div>
+  <button id="menu" (click)="menuToggle()">Menu</button>
+  <nav [ngClass]="{show: !isMenuToggeled}">
+    <ul>
+      <li><a [ngClass]="{selected: currentPage === 'cv'}" (click)="changePage('cv', $event)">CV</a></li>
+      <li><a [ngClass]="{selected: currentPage === 'work'}" (click)="changePage('work', $event)">Previous projects</a></li>
+      <li><a [ngClass]="{selected: currentPage === 'downloads'}" (click)="changePage('downloads', $event)">Downloads</a></li>
+    </ul>
+  </nav>
+</header>
+<div id="content">
+  <!-- Resume -->
+  <cv [ngClass]="{show: currentPage === 'cv'}" class="child"></cv>
+  <work [ngClass]="{show: currentPage === 'work'}" class="child"></work>
+  <downloads [ngClass]="{show: currentPage === 'downloads'}" class="child"></downloads>
+</div>

@@ -1,0 +1,115 @@
+{
+  "projects": [
+    {
+      "name": "My website",
+      "year": 2016,
+      "type": "Web application",
+      "status": "In progress",
+      "technologies":[
+        "Angular 2", "TypeScript", "JavaScript", "CSS3", "Sass", "HTML5"
+      ],
+      "summary": "As I tried to learn Angular 2, I figured that I would be interesting to make my website using it.",
+      "images": [],
+      "url": "http://jonaskf.net"
+    },{
+      "name": "elCharge",
+      "year": 2016,
+      "type": "Web application",
+      "status": "In progress",
+      "technologies":[
+        "JavaScript", "jQuery", "Php", "CSS3", "Sass", "HTML5", "RESTful API", "MySQL"
+      ],
+      "summary": "This is my bachelors project. In this project we were asked to develop a web and mobile application, that helped electric car users find chargers nearby, as well as helping them create a travel route. I was one of the programmers on this project. I am also currently working on finalizing this application with our client.",
+      "images": [],
+      "url": "https://elbil.hiof.no"
+    },{
+      "name": "Agf theme",
+      "year": 2016,
+      "type": "Theme",
+      "status": "In progress",
+      "technologies":[
+        "JavaScript", "jQuery", "Php", "CSS3", "Sass", "HTML5", "Wordpress"
+      ],
+      "summary": "A custom theme for Anne Grete Flønes's art website. The website originally used the \"unnamed\" theme, and has now gotten a fully custom theme that looks better, with a cleaner and flatter design.",
+      "images": [],
+      "url": "http://www.agf-art.com/"
+    },{
+      "name": "Eatable",
+      "year": 2016,
+      "type": "Android application",
+      "status": "Completed",
+      "technologies":[
+        "Java", "Php", "Android", "MySQL"
+      ],
+      "summary": "A prototype that I developed during the course Android-development at Østfold university college. The application shows the user if a product is eatable or not based on their diet.",
+      "images": [],
+      "url": ""
+    },{
+      "name": "Chill theme",
+      "year": 2016,
+      "type": "Theme",
+      "status": "Completed",
+      "technologies":[
+        "JavaScript", "Php", "CSS3", "HTML5", "Wordpress"
+      ],
+      "summary": "This was the theme used, before I went away from using wordpress on my website.",
+      "images": [],
+      "url": ""
+    },{
+      "name": "Vermin run",
+      "year": 2015,
+      "type": "Video game",
+      "status": "Completed",
+      "technologies":[
+        "C#", "Unity3D"
+      ],
+      "summary": "This is a video game prototype that I developed during the course \"Introduction to game development\" at Østfold university college. Type: Cross-platform video game",
+      "images": [],
+      "url": "http://frigg.hiof.no/spillprg_v155/?page_id=38"
+    },{
+      "name": "Kanutten familiebarnehage",
+      "year": 2015,
+      "type": "Theme",
+      "status": "Completed",
+      "technologies":[
+        "JavaScript", "jQuery", "Php", "CSS3", "HTML5", "Wordpress"
+      ],
+      "summary": "Custom theme for Kanutten familiebarnehage.",
+      "images": [],
+      "url": "http://kanuttenbhg.no/"
+    },{
+      "name": "God Honning",
+      "year": 2015,
+      "type": "Theme",
+      "status": "Completed",
+      "technologies":[
+        "JavaScript", "jQuery", "Php", "CSS3", "Wordpress"
+      ],
+      "summary": "The primary theme in it self, is not created by me. I've just modified it to be responsive and work on smartphones and tablets.",
+      "images": [],
+      "url": "http://godhonning.no/"
+    },{
+      "name": "Fjellstua, Hjelle Seter",
+      "year": 2015,
+      "type": "Theme & Information architecture",
+      "status": "Completed",
+      "technologies":[
+        "JavaScript", "Php", "CSS3", "HTML5", "Wordpress", "Bootstrap"
+      ],
+      "summary": "Created in the course Information architecture first half of 2015. The theme and website was creaded by me, Jim Melby and Jon Vegard Gribsrød. This was something we did in the course Information architecture.",
+      "images": [],
+      "url": "http://hjelleseter.no/"
+    },{
+      "name": "WoW Auction Helper",
+      "year": 2014,
+      "type": "Desktop application",
+      "status": "On hold",
+      "technologies":[
+        "Java"
+      ],
+      "summary": "This is a hobby project, that I have been working on when I have had some time to spare. The application is designed to make it easier to \"play\" the auction house in World of Warcraft. The application requires a API key from WoWuction to work properly.",
+      "images": [],
+      "url": ""
+    }
+  ]
+}

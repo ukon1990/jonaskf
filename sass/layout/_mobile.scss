@@ -1,0 +1,77 @@
+@media screen and (max-width:900px){
+  .project{
+    /*width: 40% !important;*/
+  }
+}
+
+@media screen and (max-width:700px){
+  header{
+    nav{
+      z-index: -1;
+      display:block;
+      width: $size__menu-width;
+      background: $color__light;
+      position: fixed;
+      height: 100%;
+      top: calc( -100% - #{$size__header-height});
+      right: 0;
+      /*right:-$size__menu-width;*/
+
+      &.show{
+        top: $size__header-height;
+        @include transition(top 1s);
+      }
+      ul{
+        padding: 0;
+        height: 100%;
+        width: $size__menu-width;
+        li{
+          display: inline-block;
+          clear: both;
+          height: $size__header-height;
+          width: $size__menu-width;
+          a{
+            width: 100%;
+            float: left;
+          }
+        }
+      }
+      @include transition(top 1s);
+    }
+    button{
+      display: block;
+      float: right;
+      height: $size__header-height;
+    }
+  }
+  #content{
+    margin-left: 0;
+    margin-right: 0;
+    width: calc( 100% - 2em );
+    .child{
+      margin-top: -900em;
+    }
+  }
+  .project{
+    /*width: calc( 100% - 1em ) !important;*/
+  }
+}
+
+@media screen and (max-width:600px) {
+    .portrait img {
+        width: 100%;
+        clear: both;
+    }
+    .about-me-content {
+        width: 100%;
+        max-width: 100%;
+        clear: both;
+    }
+    .about-me-title {
+        width: 100%;
+        clear: both;
+    }
+    .about-me-content {
+        margin-left: 0;
+    }
+}

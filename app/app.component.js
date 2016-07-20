@@ -1,0 +1,49 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var core_1 = require('@angular/core');
+var common_1 = require('@angular/common');
+var cv_component_1 = require('./cv.component');
+var project_component_1 = require('./project.component');
+var project_service_1 = require('./project.service');
+var http_1 = require('@angular/http');
+//import {RacingDataService} from './racing-data.service';
+var AppComponent = (function () {
+    function AppComponent() {
+        this.title = 'JonasKF';
+        this.currentPage = '';
+        this.isMenuToggeled = true;
+    }
+    AppComponent.prototype.ngOnInit = function () {
+        this.currentPage = window.location.hash.replace('#', '') || 'cv';
+    };
+    AppComponent.prototype.menuToggle = function () {
+        this.isMenuToggeled = !this.isMenuToggeled;
+        console.log('clicked ' + this.isMenuToggeled);
+    };
+    AppComponent.prototype.changePage = function (target, event) {
+        event.preventDefault();
+        window.history.pushState('s', 'a', '#' + target);
+        this.currentPage = target;
+        this.menuToggle();
+    };
+    AppComponent = __decorate([
+        core_1.Component({
+            selector: 'app',
+            templateUrl: 'app/templates/body.html',
+            directives: [common_1.NgClass, cv_component_1.CV, project_component_1.ProjectComponent],
+            providers: [project_service_1.ProjectService, http_1.HTTP_PROVIDERS]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], AppComponent);
+    return AppComponent;
+}());
+exports.AppComponent = AppComponent;
+//# sourceMappingURL=app.component.js.map

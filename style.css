@@ -1,3 +1,6 @@
+body {
+  background: #000000; }
+
 header {
   -webkit-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.21) !important;
   -moz-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.21) !important;
@@ -52,35 +55,21 @@ header {
           border-bottom: 1px solid #000000; }
 
 #content {
+  overflow: hidden;
+  overflow-y: visible;
   margin-top: calc( 3em - 0.5em );
-  position: absolute;
+  padding: 1em;
   z-index: 0;
   width: 80%;
   left: 0;
   right: 0;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  background: #007628; }
   #content .child {
-    margin-top: -400em;
-    padding: 0 1em 1em 1em;
-    width: 100%;
-    display: inline-block;
-    background: #007628;
-    -webkit-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.21) !important;
-    -moz-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.21) !important;
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.21) !important;
-    -webkit-transition: margin-top 1s;
-    -o-transition: margin-top 1s;
-    -moz-transition: margin-top 1s;
-    -ms-transition: margin-top 1s;
-    transition: margin-top 1s; }
+    display: none; }
     #content .child.show {
-      margin-top: 0;
-      -webkit-transition: margin-top 1s;
-      -o-transition: margin-top 1s;
-      -moz-transition: margin-top 1s;
-      -ms-transition: margin-top 1s;
-      transition: margin-top 1s; }
+      display: block; }
   #content #project-tags {
     clear: both;
     width: 100%;
@@ -95,6 +84,8 @@ header {
       border-radius: 25px; }
       #content #project-tags label input:checked {
         background: green; }
+  #content work, #content cv, #content downloads {
+    color: black; }
   #content .project {
     display: none;
     background: #009733;
@@ -117,7 +108,6 @@ header {
     display: none; }
   #content .show .download.foreground {
     margin-left: -1em;
-    position: absolute;
     z-index: 1;
     background: #009733;
     width: 100%;
@@ -159,7 +149,10 @@ header {
 
 @media screen and (max-width: 900px) {
   .project {
-    /*width: 40% !important;*/ } }
+    /*width: 40% !important;*/ }
+
+  #content.child {
+    width: 90%; } }
 @media screen and (max-width: 700px) {
   header nav {
     z-index: -1;
@@ -201,11 +194,9 @@ header {
     height: 3em; }
 
   #content {
-    margin-left: 0;
-    margin-right: 0;
-    width: calc( 100% - 2em ); }
+    width: auto; }
     #content .child {
-      margin-top: -900em; }
+      width: 100%; }
 
   .project {
     /*width: calc( 100% - 1em ) !important;*/ } }

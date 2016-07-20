@@ -20,6 +20,7 @@ var AppComponent = (function () {
     function AppComponent() {
         this.title = 'JonasKF';
         this.currentPage = '';
+        this.previousPage = '';
         this.isMenuToggeled = true;
     }
     AppComponent.prototype.ngOnInit = function () {
@@ -32,7 +33,15 @@ var AppComponent = (function () {
     AppComponent.prototype.changePage = function (target, event) {
         event.preventDefault();
         window.history.pushState('s', 'a', '#' + target);
-        this.currentPage = target;
+        if (this.currentPage !== target) {
+            this.previousPage = this.currentPage;
+            this.currentPage = target;
+        }
+        else {
+            this.currentPage = target;
+            this.previousPage = '';
+        }
+        console.log(this.previousPage);
         this.menuToggle();
     };
     AppComponent = __decorate([

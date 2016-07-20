@@ -1,4 +1,7 @@
 //Design
+body{
+  background: $color__dark;
+}
 header{
   @include box-shadow($color__shadow !important);
   right: 0; left: 0; top: 0;
@@ -48,25 +51,21 @@ header{
 }
 
 #content{
+  overflow: hidden;
+  overflow-y: visible;
   margin-top: calc( #{$size__header-height} - 0.5em );
-  position: absolute;
+  padding: 1em;
   z-index: 0;
   width: 80%;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  background: $color__medium-light;
   .child{
-    margin-top:-400em;
-    padding:0 1em 1em 1em;
-    width: 100%;
-    display: inline-block;
-    background: $color__medium-light;
-    @include box-shadow($color__shadow !important);
-    @include transition(margin-top 1s);
+    display:none;
     &.show{
-      margin-top:0;
-      @include transition(margin-top 1s);
+      display:block;
     }
   }
   #project-tags{
@@ -85,6 +84,7 @@ header{
       }
     }
   }
+  work,cv,downloads{color:black;}
   .project{
     display: none;
     background: $color__light;
@@ -116,7 +116,6 @@ header{
     }
     &.foreground{
       margin-left: -1em;
-      position: absolute;
       z-index: 1;
       background: $color__light;
       width: 100%;

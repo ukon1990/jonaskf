@@ -2,6 +2,9 @@
   .project{
     /*width: 40% !important;*/
   }
+  #content.child{
+    width: 90%;
+  }
 }
 
 @media screen and (max-width:700px){
@@ -45,11 +48,9 @@
     }
   }
   #content{
-    margin-left: 0;
-    margin-right: 0;
-    width: calc( 100% - 2em );
+    width: auto;
     .child{
-      margin-top: -900em;
+      width: 100%;
     }
   }
   .project{

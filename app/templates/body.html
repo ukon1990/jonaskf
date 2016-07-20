@@ -14,7 +14,7 @@
 </header>
 <div id="content">
   <!-- Resume -->
-  <cv [ngClass]="{show: currentPage === 'cv'}" class="child"></cv>
-  <work [ngClass]="{show: currentPage === 'work'}" class="child"></work>
-  <downloads [ngClass]="{show: currentPage === 'downloads'}" class="child"></downloads>
+  <cv [ngClass]="{show: currentPage === 'cv', previous: previousPage === 'cv'}" class="child"></cv>
+  <work [ngClass]="{show: currentPage === 'work', previous: previousPage === 'work'}" class="child"></work>
+  <downloads [ngClass]="{show: currentPage === 'downloads', previous: previousPage === 'downloads'}" class="child"></downloads>
 </div>

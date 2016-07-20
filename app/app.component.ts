@@ -16,6 +16,7 @@ import {HTTP_PROVIDERS} from '@angular/http';
 export class AppComponent{
   title = 'JonasKF';
   currentPage: string = '';
+  previousPage: string = '';
   isMenuToggeled: boolean = true;
 
   ngOnInit(){
@@ -29,7 +30,14 @@ export class AppComponent{
   changePage(target, event){
     event.preventDefault();
     window.history.pushState('s','a', '#' + target);
-    this.currentPage = target;
+    if(this.currentPage !== target){
+      this.previousPage = this.currentPage;
+      this.currentPage = target;
+    }else{
+      this.currentPage = target;
+      this.previousPage = '';
+    }
+    console.log(this.previousPage);
     this.menuToggle();
   }
 

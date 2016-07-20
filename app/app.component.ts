@@ -3,13 +3,14 @@ import {NgClass} from '@angular/common';
 import {CV} from './cv.component';
 import {ProjectComponent} from './project.component';
 import {ProjectService} from './project.service';
+import {DownloadComponent} from './download.component';
 import {HTTP_PROVIDERS} from '@angular/http';
 //import {RacingDataService} from './racing-data.service';
 
 @Component({
   selector: 'app',
   templateUrl:'app/templates/body.html',
-  directives: [NgClass, CV, ProjectComponent],
+  directives: [NgClass, CV, ProjectComponent, DownloadComponent],
   providers: [ProjectService, HTTP_PROVIDERS]
 })
 export class AppComponent{
@@ -18,7 +19,7 @@ export class AppComponent{
   isMenuToggeled: boolean = true;
 
   ngOnInit(){
-    this.currentPage = window.location.hash.replace('#', '') || 'cv';
+    this.currentPage = window.location.hash.replace('#', '').split('/')[0] || 'cv';
   }
 
   menuToggle(){

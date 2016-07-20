@@ -28,13 +28,17 @@ header {
       list-style: none; }
       header nav ul li a {
         padding: 1em;
-        -webkit-transition: background 1s;
-        -o-transition: background 1s;
-        -moz-transition: background 1s;
-        -ms-transition: background 1s;
-        transition: background 1s; }
-        header nav ul li a:hover, header nav ul li a.selected {
-          background: #009733;
+        background: transparent;
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        box-shadow: none !important;
+        -webkit-transition: background 1s, box-shadow 1s;
+        -o-transition: background 1s, box-shadow 1s;
+        -moz-transition: background 1s, box-shadow 1s;
+        -ms-transition: background 1s, box-shadow 1s;
+        transition: background 1s, box-shadow 1s; }
+        header nav ul li a:hover {
+          background: #007628;
           -webkit-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.21) !important;
           -moz-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.21) !important;
           box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.21) !important;
@@ -43,8 +47,9 @@ header {
           -moz-transition: background 1s, box-shadow 1s;
           -ms-transition: background 1s, box-shadow 1s;
           transition: background 1s, box-shadow 1s; }
-          header nav ul li a:hover.selected, header nav ul li a.selected.selected {
-            font-weight: bold; }
+        header nav ul li a.selected {
+          font-weight: bold;
+          border-bottom: 1px solid #000000; }
 
 #content {
   margin-top: calc( 3em - 0.5em );
@@ -106,6 +111,24 @@ header {
       display: block; }
     #content .project .p-year {
       float: right; }
+  #content .show .download h3 > button {
+    float: right; }
+  #content .show .download .more {
+    display: none; }
+  #content .show .download.foreground {
+    margin-left: -1em;
+    position: absolute;
+    z-index: 1;
+    background: #009733;
+    width: 100%;
+    padding: 1em;
+    top: 0;
+    margin-top: 3em;
+    -webkit-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.21);
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.21); }
+    #content .show .download.foreground .more {
+      display: block; }
 
 .float-left {
   float: left;

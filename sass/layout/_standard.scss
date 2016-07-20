@@ -29,14 +29,17 @@ header{
         list-style: none;
         a{
           padding: 1em;
-          @include transition(background 1s);
-          &:hover, &.selected{
-            &.selected{
-              font-weight: bold;
-            }
-            background: $color__light;
+          background: transparent;
+          @include box-shadow(none !important);
+          @include transition(background 1s, box-shadow 1s);
+          &:hover{
+            background: $color__medium-light;
             @include box-shadow($color__shadow !important);
             @include transition(background 1s, box-shadow 1s);
+          }
+          &.selected{
+            font-weight: bold;
+            border-bottom: 1px solid $color__dark;
           }
         }
       }
@@ -99,6 +102,31 @@ header{
     }
     .p-year{
       float:right;
+    }
+  }
+
+  .show .download{
+    h3{
+      &> button{
+        float: right;
+      }
+    }
+    .more{
+      display: none;
+    }
+    &.foreground{
+      margin-left: -1em;
+      position: absolute;
+      z-index: 1;
+      background: $color__light;
+      width: 100%;
+      padding: 1em;
+      top: 0;
+      margin-top: $size__header-height;
+      @include box-shadow($color__shadow);
+      .more{
+        display: block;
+      }
     }
   }
 }

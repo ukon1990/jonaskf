@@ -1,0 +1,9 @@
+<h2>Downloads</h2>
+<div class="download" [ngClass]="{foreground: d.slug === foreground}" [ngClass]="{show: d.slug === foreground || foreground === ''}" *ngFor="let d of downloads.downloads">
+  <h3>{{d.name}} <button class="btn" (click)="readMore(d.slug)">Read more</button></h3>
+  <p><strong>Requirements: </strong>{{arrayToString(d.requirements)}}</p>
+  <p>{{d.summary}}</p>
+  <a [href]="d.changelog[0].url" class="btn">Download {{d.changelog[0].version}}</a>
+  <p class="more">{{d.text}}</p>
+  <div class="more" *ngFor="let c of d.changelog" [innerHTML]="c.changes"></div>
+</div>

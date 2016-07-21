@@ -34,6 +34,11 @@ export class DownloadComponent{
     }
   }
 
+  test(v){
+    console.log(v);
+    return 'https://www.youtube.com/embed/S8Y2vCt25rA?feature=oembed';
+  }
+
   readMore(project): void{
     if(this.foreground === project){
       this.foreground = '';

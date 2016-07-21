@@ -4,12 +4,15 @@
   <p [innerHTML]="d.summary"></p>
   <p><strong>Status: </strong>{{d.status}}</p>
   <p><strong>Requirements: </strong>{{arrayToString(d.requirements)}}</p>
-  <div class="carousel">
+  <div *ngIf="d.images.length !== 0"class="carousel">
     <ul class="slides more">
       <li [ngClass]="{full: fullscreenImg === i, hide: fullscreenImg !== -1 && fullscreenImg !== i}" (click)="imgClick(i)" *ngFor="let img of d.images, let i = index">
         <img [src]="img.src" [alt]="img.alt"/>
       </li>
     </ul>
+  </div>
+  <div class="more" *ngFor="let v of d.video">
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/S8Y2vCt25rA?feature=oembed" frameborder="0" allowfullscreen=""></iframe>
   </div>
   <ul class="dl-link">
     <li *ngFor="let url of d.changelog[0].url">

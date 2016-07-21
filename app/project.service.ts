@@ -21,7 +21,6 @@ export class ProjectService{
             }
           }
         }
-        console.log(tags);
         r.technologies = tags;
         r.projects = projects;
         return r;

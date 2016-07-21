@@ -25,7 +25,6 @@ export class AppComponent{
 
   menuToggle(){
     this.isMenuToggeled = !this.isMenuToggeled;
-    console.log('clicked ' + this.isMenuToggeled);
   }
   changePage(target, event){
     event.preventDefault();
@@ -37,7 +36,6 @@ export class AppComponent{
       this.currentPage = target;
       this.previousPage = '';
     }
-    console.log(this.previousPage);
     this.menuToggle();
   }
 

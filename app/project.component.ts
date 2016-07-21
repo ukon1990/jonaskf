@@ -32,7 +32,6 @@ export class ProjectComponent{
       //Getting the items index and removing it from the filter
       this.technologyFilter.splice( this.technologyFilter.indexOf(tech, 0), 1);
     }
-    console.log(this.technologyFilter);
   }
   //Checking if a project matches a given tag
   matchFilter(a: string[]){

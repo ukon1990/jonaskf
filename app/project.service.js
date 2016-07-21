@@ -31,7 +31,6 @@ var ProjectService = (function () {
                     }
                 }
             }
-            console.log(tags);
             r.technologies = tags;
             r.projects = projects;
             return r;

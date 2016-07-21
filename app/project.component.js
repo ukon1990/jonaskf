@@ -31,7 +31,6 @@ var ProjectComponent = (function () {
             //Getting the items index and removing it from the filter
             this.technologyFilter.splice(this.technologyFilter.indexOf(tech, 0), 1);
         }
-        console.log(this.technologyFilter);
     };
     //Checking if a project matches a given tag
     ProjectComponent.prototype.matchFilter = function (a) {

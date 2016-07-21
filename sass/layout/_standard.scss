@@ -9,7 +9,8 @@ header{
   z-index: 2;
   width:100%;
   height: $size__header-height;
-  background: $color__light;
+  background: url('img/banner.jpg') no-repeat/*$color__light*/;
+  background-size: cover;
   padding:0;
   #title{
     margin: 0.5em;
@@ -21,6 +22,7 @@ header{
       display:inline-block;
       margin: 0;
       clear: both;
+      color: white;
     }
   }
   button{
@@ -33,6 +35,8 @@ header{
         float: left;
         list-style: none;
         a{
+          color: white;
+          text-decoration: none;
           padding: 1em;
           background: transparent;
           @include box-shadow(none !important);
@@ -44,7 +48,7 @@ header{
           }
           &.selected{
             font-weight: bold;
-            border-bottom: 1px solid $color__dark;
+            text-decoration: underline;
           }
         }
       }
@@ -131,6 +135,10 @@ header{
       .more{
         display: block;
       }
+      .dl-link{
+        padding: 0;
+        list-style: none;
+      }
     }
   }
 }
@@ -179,13 +187,20 @@ header{
         width: 20%;
         img{
             display:block;
-            width:100%;
+            margin: auto;
+            width:auto;
             max-width:100%;
         }
         &.full{
-          position:absolute;
+          position:relative;
+          margin-left: auto;
+          margin-right: auto;
           z-index: 3;
-          width:auto !important;
+          display:inline-block;
+          width: 100% !important;
+        }
+        &.hide{
+          display: none;
         }
     }
 }

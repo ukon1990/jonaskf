@@ -28,7 +28,6 @@ var AppComponent = (function () {
     };
     AppComponent.prototype.menuToggle = function () {
         this.isMenuToggeled = !this.isMenuToggeled;
-        console.log('clicked ' + this.isMenuToggeled);
     };
     AppComponent.prototype.changePage = function (target, event) {
         event.preventDefault();
@@ -41,7 +40,6 @@ var AppComponent = (function () {
             this.currentPage = target;
             this.previousPage = '';
         }
-        console.log(this.previousPage);
         this.menuToggle();
     };
     AppComponent = __decorate([

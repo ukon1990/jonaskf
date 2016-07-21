@@ -1,3 +1,11 @@
+@charset "UTF-8";
+/* grønt tema
+$color__light: #009733;
+$color__medium-light: #007628;
+$color__medium: #00561D;
+$color__medium-dark: #003010;
+$color__dark: #000000;
+*/
 float-right {
   float: right; }
 
@@ -21,7 +29,8 @@ header {
   z-index: 2;
   width: 100%;
   height: 3em;
-  background: #009733;
+  background: url("img/banner.jpg") no-repeat;
+  background-size: cover;
   padding: 0; }
   header #title {
     margin: 0.5em;
@@ -32,7 +41,8 @@ header {
     header #title h1 {
       display: inline-block;
       margin: 0;
-      clear: both; }
+      clear: both;
+      color: white; }
   header button {
     display: none; }
   header nav {
@@ -41,6 +51,8 @@ header {
       float: left;
       list-style: none; }
       header nav ul li a {
+        color: white;
+        text-decoration: none;
         padding: 1em;
         background: transparent;
         -webkit-box-shadow: none !important;
@@ -52,7 +64,7 @@ header {
         -ms-transition: background 1s, box-shadow 1s;
         transition: background 1s, box-shadow 1s; }
         header nav ul li a:hover {
-          background: #007628;
+          background: #9B9999;
           -webkit-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.21) !important;
           -moz-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.21) !important;
           box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.21) !important;
@@ -63,7 +75,7 @@ header {
           transition: background 1s, box-shadow 1s; }
         header nav ul li a.selected {
           font-weight: bold;
-          border-bottom: 1px solid #000000; }
+          text-decoration: underline; }
 
 #content {
   overflow: hidden;
@@ -76,7 +88,7 @@ header {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  background: #007628; }
+  background: #9B9999; }
   #content .child {
     display: none; }
     #content .child.show {
@@ -99,7 +111,7 @@ header {
     color: black; }
   #content .project {
     display: none;
-    background: #009733;
+    background: #FFF;
     width: auto;
     float: left;
     margin: 0.5em;
@@ -122,7 +134,7 @@ header {
   #content .show .download.foreground {
     margin-left: -1em;
     z-index: 1;
-    background: #009733;
+    background: #FFF;
     width: 100%;
     padding: 1em;
     top: 0;
@@ -132,6 +144,9 @@ header {
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.21); }
     #content .show .download.foreground .more {
       display: block; }
+    #content .show .download.foreground .dl-link {
+      padding: 0;
+      list-style: none; }
 
 .float-left {
   float: left;
@@ -176,12 +191,18 @@ header {
     width: 20%; }
     .slides > li img {
       display: block;
-      width: 100%;
+      margin: auto;
+      width: auto;
       max-width: 100%; }
     .slides > li.full {
-      position: absolute;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
       z-index: 3;
-      width: auto !important; }
+      display: inline-block;
+      width: 100% !important; }
+    .slides > li.hide {
+      display: none; }
 
 @media screen and (max-width: 900px) {
   .project {
@@ -194,7 +215,7 @@ header {
     z-index: -1;
     display: block;
     width: 15em;
-    background: #009733;
+    background: #FFF;
     position: fixed;
     height: 100%;
     top: 3em;
@@ -222,7 +243,8 @@ header {
         width: 15em; }
         header nav ul li a {
           width: 100%;
-          float: left; }
+          float: left;
+          color: black; }
   header button {
     display: block;
     float: right;

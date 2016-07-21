@@ -21,7 +21,7 @@ var AppComponent = (function () {
         this.title = 'JonasKF';
         this.currentPage = '';
         this.previousPage = '';
-        this.isMenuToggeled = true;
+        this.isMenuToggeled = false;
     }
     AppComponent.prototype.ngOnInit = function () {
         this.currentPage = window.location.hash.replace('#', '').split('/')[0] || 'cv';

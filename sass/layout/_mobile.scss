@@ -16,13 +16,13 @@
       background: $color__light;
       position: fixed;
       height: 100%;
-      top: calc( -100% - #{$size__header-height});
-      right: 0;
-      /*right:-$size__menu-width;*/
+      top: $size__header-height;
+      right:-$size__menu-width;
+      @include transition(right 0.5s);
 
       &.show{
-        top: $size__header-height;
-        @include transition(top 1s);
+        right: 0;
+        @include transition(right 0.5s);
       }
       ul{
         padding: 0;
@@ -39,12 +39,24 @@
           }
         }
       }
-      @include transition(top 1s);
     }
     button{
       display: block;
       float: right;
       height: $size__header-height;
+      width: $size__header-height;
+      margin: 0.5em;
+      border-style: none;
+      background: url('icons/menu.svg') no-repeat transparent;
+      text-indent: 200%;
+      white-space: nowrap;
+      overflow: hidden;
+      @include transform( rotate(90deg) );
+      @include transition( transform 0.5s );
+      &.toggle{
+        @include transform( rotate(-90deg) );
+        @include transition( transform 0.5s );
+      }
     }
   }
   #content{

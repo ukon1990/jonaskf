@@ -14,6 +14,7 @@ import {DownloadService} from './download.service';
 export class DownloadComponent{
   downloads = {};
   foreground: string = '';
+  fullscreenImg: number = -1;
 
   constructor(private downloadService: DownloadService){}
   ngOnInit(): void{
@@ -25,9 +26,18 @@ export class DownloadComponent{
       this.foreground = window.location.hash.replace('#', '').split('/')[1];
   }
 
+  imgClick(index){
+    if(this.fullscreenImg !== index){
+      this.fullscreenImg = index;
+    }else{
+      this.fullscreenImg = -1;
+    }
+  }
+
   readMore(project): void{
     if(this.foreground === project){
       this.foreground = '';
+      this.fullscreenImg = -1;
       window.history.pushState('s','a', window.location.hash.split('/')[0]);
     }else{
       this.foreground = project;

@@ -4,6 +4,12 @@
   -ms-border-radius: $radius;
   border-radius: $radius;
 }
+@mixin transform($val...){
+  -webkit-transform: $val;
+  -moz-transform: $val;
+  -ms-transform: $val;
+  transform: $val;
+}
 
 @mixin box-shadow($shadow...){
   -webkit-box-shadow:$shadow;
@@ -23,3 +29,5 @@
   -ms-transition: $val;
   transition: $val;
 }
+
+@import "_clearings.scss";

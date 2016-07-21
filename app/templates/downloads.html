@@ -1,9 +1,20 @@
 <h2>Downloads</h2>
 <div class="download" [ngClass]="{foreground: d.slug === foreground}" [ngClass]="{show: d.slug === foreground || foreground === ''}" *ngFor="let d of downloads.downloads">
-  <h3>{{d.name}} <button class="btn" (click)="readMore(d.slug)">Read more</button></h3>
-  <p><strong>Requirements: </strong>{{arrayToString(d.requirements)}}</p>
+  <h3>{{d.name}} <button [ngClass]="{toggle: d.slug == foreground}" class="btn" (click)="readMore(d.slug)">Read {{d.slug == foreground ? 'less' : 'more'}}</button></h3>
   <p>{{d.summary}}</p>
+  <p><strong>Requirements: </strong>{{arrayToString(d.requirements)}}</p>
+  <div class="carousel">
+    <ul class="slides more">
+      <li [ngClass]="{full: fullscreenImg === i}" (click)="imgClick(i)" *ngFor="let img of d.images, let i = index">
+        <img [src]="img.src" [alt]="img.alt"/>
+      </li>
+    </ul>
+  </div>
   <a [href]="d.changelog[0].url" class="btn">Download {{d.changelog[0].version}}</a>
-  <p class="more">{{d.text}}</p>
-  <div class="more" *ngFor="let c of d.changelog" [innerHTML]="c.changes"></div>
+  <p class="more" [innerHTML]="d.text"></p>
+  <h3 class="more">Changelog</h3>
+  <div class="more" *ngFor="let c of d.changelog">
+    <strong>{{c.date || date}} - {{c.version}}</strong> <a *ngIf="c.url !== ''" class="float-right" [href]="c.url">Download</a>
+    <div [innerHTML]="c.changes"></div>
+  </div>
 </div>

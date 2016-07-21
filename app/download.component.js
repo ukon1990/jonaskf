@@ -16,6 +16,7 @@ var DownloadComponent = (function () {
         this.downloadService = downloadService;
         this.downloads = {};
         this.foreground = '';
+        this.fullscreenImg = -1;
     }
     DownloadComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -23,9 +24,18 @@ var DownloadComponent = (function () {
             .subscribe(function (downloads) { return _this.downloads = downloads; }, function (error) { return console.log(error); });
         this.foreground = window.location.hash.replace('#', '').split('/')[1];
     };
+    DownloadComponent.prototype.imgClick = function (index) {
+        if (this.fullscreenImg !== index) {
+            this.fullscreenImg = index;
+        }
+        else {
+            this.fullscreenImg = -1;
+        }
+    };
     DownloadComponent.prototype.readMore = function (project) {
         if (this.foreground === project) {
             this.foreground = '';
+            this.fullscreenImg = -1;
             window.history.pushState('s', 'a', window.location.hash.split('/')[0]);
         }
         else {

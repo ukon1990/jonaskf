@@ -12,10 +12,12 @@ header{
   background: $color__light;
   padding:0;
   #title{
+    margin: 0.5em;
+    padding-left: 64px;
+    background: url( 'icons/logo.svg') no-repeat;
     float:left;
     display:inline-block;
     h1{
-      padding:0.2em 1em;
       display:inline-block;
       margin: 0;
       clear: both;
@@ -109,6 +111,9 @@ header{
     h3{
       &> button{
         float: right;
+        &.toggle{
+          /*background: url('icons/close.svg') no-repeat transparent;*/
+        }
       }
     }
     .more{
@@ -156,4 +161,31 @@ header{
 }
 .name {
     padding: 0 0.2em 0 0;
+}
+
+/*Gallery*/
+.carousel{
+    overflow:hidden;
+    width:100%;
+}
+.slides{
+    list-style:none;
+    position:relative;
+    overflow:hidden;
+    padding-left: 0;
+    &> li{
+        position:relative;
+        float:left;
+        width: 20%;
+        img{
+            display:block;
+            width:100%;
+            max-width:100%;
+        }
+        &.full{
+          position:absolute;
+          z-index: 3;
+          width:auto !important;
+        }
+    }
 }

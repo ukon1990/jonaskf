@@ -17,7 +17,7 @@ export class AppComponent{
   title = 'JonasKF';
   currentPage: string = '';
   previousPage: string = '';
-  isMenuToggeled: boolean = true;
+  isMenuToggeled: boolean = false;
 
   ngOnInit(){
     this.currentPage = window.location.hash.replace('#', '').split('/')[0] || 'cv';

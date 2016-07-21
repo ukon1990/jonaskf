@@ -1,3 +1,12 @@
+float-right {
+  float: right; }
+
+float-left {
+  float: left; }
+
+clear-both {
+  clear: both; }
+
 body {
   background: #000000; }
 
@@ -15,10 +24,12 @@ header {
   background: #009733;
   padding: 0; }
   header #title {
+    margin: 0.5em;
+    padding-left: 64px;
+    background: url("icons/logo.svg") no-repeat;
     float: left;
     display: inline-block; }
     header #title h1 {
-      padding: 0.2em 1em;
       display: inline-block;
       margin: 0;
       clear: both; }
@@ -104,6 +115,8 @@ header {
       float: right; }
   #content .show .download h3 > button {
     float: right; }
+    #content .show .download h3 > button.toggle {
+      /*background: url('icons/close.svg') no-repeat transparent;*/ }
   #content .show .download .more {
     display: none; }
   #content .show .download.foreground {
@@ -147,6 +160,29 @@ header {
 .name {
   padding: 0 0.2em 0 0; }
 
+/*Gallery*/
+.carousel {
+  overflow: hidden;
+  width: 100%; }
+
+.slides {
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+  padding-left: 0; }
+  .slides > li {
+    position: relative;
+    float: left;
+    width: 20%; }
+    .slides > li img {
+      display: block;
+      width: 100%;
+      max-width: 100%; }
+    .slides > li.full {
+      position: absolute;
+      z-index: 3;
+      width: auto !important; }
+
 @media screen and (max-width: 900px) {
   .project {
     /*width: 40% !important;*/ }
@@ -157,41 +193,66 @@ header {
   header nav {
     z-index: -1;
     display: block;
-    width: 20em;
+    width: 15em;
     background: #009733;
     position: fixed;
     height: 100%;
-    top: calc( -100% - 3em);
-    right: 0;
-    /*right:-$size__menu-width;*/
-    -webkit-transition: top 1s;
-    -o-transition: top 1s;
-    -moz-transition: top 1s;
-    -ms-transition: top 1s;
-    transition: top 1s; }
+    top: 3em;
+    right: -15em;
+    -webkit-transition: right 0.5s;
+    -o-transition: right 0.5s;
+    -moz-transition: right 0.5s;
+    -ms-transition: right 0.5s;
+    transition: right 0.5s; }
     header nav.show {
-      top: 3em;
-      -webkit-transition: top 1s;
-      -o-transition: top 1s;
-      -moz-transition: top 1s;
-      -ms-transition: top 1s;
-      transition: top 1s; }
+      right: 0;
+      -webkit-transition: right 0.5s;
+      -o-transition: right 0.5s;
+      -moz-transition: right 0.5s;
+      -ms-transition: right 0.5s;
+      transition: right 0.5s; }
     header nav ul {
       padding: 0;
       height: 100%;
-      width: 20em; }
+      width: 15em; }
       header nav ul li {
         display: inline-block;
         clear: both;
         height: 3em;
-        width: 20em; }
+        width: 15em; }
         header nav ul li a {
           width: 100%;
           float: left; }
   header button {
     display: block;
     float: right;
-    height: 3em; }
+    height: 3em;
+    width: 3em;
+    margin: 0.5em;
+    border-style: none;
+    background: url("icons/menu.svg") no-repeat transparent;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    transition: transform 0.5s; }
+    header button.toggle {
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      -webkit-transition: transform 0.5s;
+      -o-transition: transform 0.5s;
+      -moz-transition: transform 0.5s;
+      -ms-transition: transform 0.5s;
+      transition: transform 0.5s; }
 
   #content {
     width: auto; }

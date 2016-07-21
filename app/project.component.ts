@@ -4,8 +4,8 @@ import {Project} from './project';
 import {ProjectService} from './project.service';
 
 @Component({
-  selector: 'work',
-  templateUrl: 'app/templates/work.html',
+  selector: 'projects',
+  templateUrl: 'app/templates/projects.html',
   styleUrls:[],
   directives: [NgClass],
   providers: [ProjectService]

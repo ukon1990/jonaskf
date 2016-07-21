@@ -21,11 +21,19 @@ export class AppComponent{
 
   ngOnInit(){
     this.currentPage = window.location.hash.replace('#', '').split('/')[0] || 'cv';
+    window.addEventListener("hashchange", this.hashChange, false);
   }
 
   menuToggle(){
     this.isMenuToggeled = !this.isMenuToggeled;
   }
+
+  hashChange(): void{
+    console.log('Hash changed');
+    this.currentPage = window.location.hash.replace('#', '').split('/')[0] || 'cv';
+    console.log(this.currentPage);
+  }
+
   changePage(target, event){
     event.preventDefault();
     window.history.pushState('s','a', '#' + target);

@@ -67,8 +67,8 @@ var ProjectComponent = (function () {
     };
     ProjectComponent = __decorate([
         core_1.Component({
-            selector: 'work',
-            templateUrl: 'app/templates/work.html',
+            selector: 'projects',
+            templateUrl: 'app/templates/projects.html',
             styleUrls: [],
             directives: [common_1.NgClass],
             providers: [project_service_1.ProjectService]

@@ -1,4 +1,4 @@
-<h2>Previous projects</h2>
+<h2>Projects</h2>
 Here are some software that I have worked on in chronological order. All the external links open in a new window.
 <div id="project-tags">
   <label *ngFor="let tag of projects.technologies">
@@ -14,5 +14,8 @@ Here are some software that I have worked on in chronological order. All the ex
   <strong>Technologies: </strong><em>{{arrayToString(p.technologies)}}</em><br>
   <strong>Project type: </strong><em>{{p.type}}</em><br>
   <p><strong>Summary: </strong>{{p.summary}}</p>
-  <span *ngIf="p.url !== ''"><strong>Url: </strong><a [href]="p.url" target="{{ p.url.indexOf(http) > -1 ? '_blank' : '_self'}}">{{p.url}}</a></span>
+  <span *ngIf="p.url !== ''"><strong>Url: </strong>
+    <a  [href]="p.url" target="_blank">{{p.url}}</a>
+    <!--*ngIf="p.url.indexOf('http') > -1" <a *ngIf="p.url.indexOf('http') === -1" (click)="changePage(p.url.replace('#', ''), $event)" [href]="p.url">{{p.url}}</a>-->
+  </span>
 </div>

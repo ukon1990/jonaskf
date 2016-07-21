@@ -6,7 +6,7 @@
   <nav [ngClass]="{show: isMenuToggeled}">
     <ul>
       <li><a [ngClass]="{selected: currentPage === 'cv'}" (click)="changePage('cv', $event)" href="#cv">CV</a></li>
-      <li><a [ngClass]="{selected: currentPage === 'work'}" (click)="changePage('work', $event)" href="#work">Previous projects</a></li>
+      <li><a [ngClass]="{selected: currentPage === 'projects'}" (click)="changePage('projects', $event)" href="#projects">Projects</a></li>
       <li><a [ngClass]="{selected: currentPage === 'downloads'}" (click)="changePage('downloads', $event)" href="#downloads">Downloads</a></li>
     </ul>
   </nav>
@@ -14,6 +14,6 @@
 <div id="content">
   <!-- Resume -->
   <cv [ngClass]="{show: currentPage === 'cv', previous: previousPage === 'cv'}" class="child"></cv>
-  <work [ngClass]="{show: currentPage === 'work', previous: previousPage === 'work'}" class="child"></work>
+  <projects [ngClass]="{show: currentPage === 'projects', previous: previousPage === 'projects'}" class="child"></projects>
   <downloads [ngClass]="{show: currentPage === 'downloads', previous: previousPage === 'downloads'}" class="child"></downloads>
 </div>

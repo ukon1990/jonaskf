@@ -25,9 +25,15 @@ var AppComponent = (function () {
     }
     AppComponent.prototype.ngOnInit = function () {
         this.currentPage = window.location.hash.replace('#', '').split('/')[0] || 'cv';
+        window.addEventListener("hashchange", this.hashChange, false);
     };
     AppComponent.prototype.menuToggle = function () {
         this.isMenuToggeled = !this.isMenuToggeled;
+    };
+    AppComponent.prototype.hashChange = function () {
+        console.log('Hash changed');
+        this.currentPage = window.location.hash.replace('#', '').split('/')[0] || 'cv';
+        console.log(this.currentPage);
     };
     AppComponent.prototype.changePage = function (target, event) {
         event.preventDefault();

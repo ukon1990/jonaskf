@@ -6,14 +6,17 @@ $color__medium: #00561D;
 $color__medium-dark: #003010;
 $color__dark: #000000;
 */
-float-right {
+.float-right {
   float: right; }
 
-float-left {
+.float-left {
   float: left; }
 
-clear-both {
+.clear-both {
   clear: both; }
+
+.hide {
+  display: none; }
 
 body {
   background: #000000; }
@@ -148,7 +151,7 @@ header {
       padding: 0;
       list-style: none; }
 
-.float-left {
+.cv-left {
   float: left;
   max-width: 30em;
   margin-top: 1em; }
@@ -201,8 +204,6 @@ header {
       z-index: 3;
       display: inline-block;
       width: 100% !important; }
-    .slides > li.hide {
-      display: none; }
 
 @media screen and (max-width: 900px) {
   .project {

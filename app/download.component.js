@@ -44,7 +44,7 @@ var DownloadComponent = (function () {
         }
         else {
             this.foreground = project;
-            window.history.pushState('s', 'a', window.location.hash + '/' + project);
+            window.history.pushState('s', 'a', window.location.hash.split('/')[0] + '/' + project);
         }
     };
     DownloadComponent.prototype.arrayToString = function (arr) {

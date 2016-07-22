@@ -46,7 +46,7 @@ export class DownloadComponent{
       window.history.pushState('s','a', window.location.hash.split('/')[0]);
     }else{
       this.foreground = project;
-      window.history.pushState('s','a', window.location.hash + '/' + project);
+      window.history.pushState('s','a', window.location.hash.split('/')[0] + '/' + project);
     }
   }
 

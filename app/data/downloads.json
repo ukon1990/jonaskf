@@ -5,11 +5,12 @@
       "slug": "wah",
       "status":"On hold",
       "type":"Desktop application",
-      "summary": "World of Warcraft Auction Helper is  application that allows you to get a better overview over what items is worth investing in at your local auctionhouse.",
-      "text":"The development of this application spawned from me being tierd of using spreadsheets to manage my investments at the auctionhouse.<br>",
+      "summary": "World of Warcraft Auction Helper is  application that allows you to get a better overview over what items is worth investing in at your local auctionhouse. The application uses pre-defined filters to calculate the production cost of an item and the profit based on the cheapest current auction of that item. The data used to get demand is fetched from wowuction. You can also set up your own \"watch list\" filter, and there is a filter that shows what items that has a min price lower than the market price. For more info on how to set the application up for use if you need help, go to the \"how to\" section for this application  in the application menu.",
+      "text":"<h3>What the application does:</h3>The application uses data from wowuction, to calculate what's profitable to make and what's not. The blizzard API is used to know what auctions you have up on the auction house, and is used to show you whom have undercutted you and how much your auctions are worth.In the main window you'll see three tales (unless you have chosen to have fewer). The one on the left is for the filtered auctions, meaning those that either are based on your filter or the pre-defined ones. The two other tables are the data from wowuction (new updates around ever hour or so) and directly from blizzards API (new update available every 15 minutes or so). You can search for text in any of the columns in the table.Using these two together, allows you to easily find out what items you already have at the auction house, so that you know what you need to make more of (and what you don't). So there is no more a need of checking your auctioneer every time, you wonder if there is something you already have up at the auction house.<strong>You have 9 pre-defined filters that you can use to find the potential profit of an item:</strong><em>Currently there are just Warlords of Draenor recipes implemented in the application(the exception is the glyphs).</em><ul><li>Gear (Blacksmithing, Jewelcrafting, Tailoring, Leatherworking)</li><li>Gems (both blue and green ones)</li><li>Enchants (All Warlords of Draenor Recepies should have been added)</li><li>Consumables(Cooking &amp; Alchemy)</li><li>Glyphs (All glyphs)<ul><li>You can choose if you wish to buy all the herbs and mill them, just get warbinders ink and turn them into the materials needed or if you just want to buy the inks form the auction house.</li></ul></li><li>Crafted materials (Currently just WoD materials, but more is coming)</li><li>Items that are cheaper than the market price.</li></ul>These prices are calculated with the assumption that you buy every non soulbound item, from the auction house.The dailie materials's prices are calculated based on what it actually costs to make them (raw materials). Please, do not post such items too cheap(even if it is profitable for you to post them cheap)... The daily cooldown in it self, should be worth a couple extra gold.",
       "requirements": [
         "A computer", "Java Runtime", "WoWuction API key"
       ],
+      "video":[{"url":""}],
       "images":[
         {
           "src": "img/wah/owner-stats.jpg",
@@ -114,9 +115,42 @@
          }
       ]
     },{
-      "name":"Vermin run",
-      "slug": "vermin-run",
+      "name":"Eatable prototype",
+      "slug": "eatable",
       "status":"Completed prototype",
+      "type":"Android app",
+      "summary": "Here you can see an application that I created during the course \"Android-development\" in the spring of 2016 at the University College of Østfold. During this course we were supposed to come up with a concept for an android application, and develop a prototype for it.",
+      "text":"<br><strong>Languages used:</strong> Java, php and mySQL<br><strong>Software used:</strong> Android Studio, PhpStorm and Adobe Experience Design<br><h2>The application</h2><img class=\"wp-image-600 size-medium float-left\" src=\"img/eatable/eatable-logo.png\" alt=\"logo\" width=\"300\" height=\"281\"/>The concept I decided to create a prototype for was a food scanner. The application was named \"Eatable?\".Eatable is a application that allows the user to define a diet that they are following. If they have defined a diet, a scanned product will tell the user if that product is suitable for their diet or not. You can find a video walkthrough of the application below.",
+      "requirements": [
+        "Android"
+      ],
+      "images":[],
+      "video":[{"url": "https://www.youtube.com/embed/80AsYIiqtJM"}],
+      "links":[
+        {"name":"GitHub", "href":"https://github.com/ukon1990/Eatable"},
+        {"name":"Project site(Norwegian)", "href":"http://frigg.hiof.no/android_v165/"}
+      ],
+      "changelog":[
+        {
+          "version":"Prototype Final",
+          "date": "29/4-2016",
+          "url": [
+            {"platform": "Android", "href": "http://frigg.hiof.no/android_v165/delivery/spisbar-release.apk"}
+          ],
+          "changes":""
+        },{
+          "version":"Prototype Beta",
+          "date": "10/4-2016",
+          "url": [
+            {"platform": "Android", "href": "http://frigg.hiof.no/android_v165/wp-content/uploads/2016/04/spisbart-beta_v3.apk"}
+          ],
+          "changes":""
+        }
+      ]
+    },{
+      "name":"Vermin run prototype",
+      "slug": "vermin-run",
+      "status":"Completed",
       "type":"Video game",
       "summary": "First of all, I'd like to point out that this is a <span style=\"text-decoration: underline;\"><strong><em>game prototype</em></strong></span>. This is a game that I created in the course <em>Introduction to game programming</em> at <a href=\"http://www.hiof.no\" target=\"_blank\">Østfold University College</a>(Opens in a new tab). Please do keep in mind, that I have not created all the textures in the game my self. The textures are bought from <a href=\"http://gametextures.com/\" target=\"_blank\">GameTextures.com</a>. If you have not heard of them, and are in need of some awesome PBR (Physically Based Rendering) materials, check them out! Lots of good materials for games there. Some of the models in this game are from World of Warcraft, but I am under the understanding that it was ok to use it, as long as it was nothing commercial and that it is a \"fan\" game. The original intention was to make everything my self, but as I was alone on this project there simply was not time for it (I also did not have any experience with Maya beforehand). If you wish to get a gimps into the project process, feel free to check out the project page (<a href=\"http://frigg.hiof.no/spillprg_v155/\" target=\"_blank\">http://frigg.hiof.no/spillprg_v155/</a>). You can also find the project report there.",
       "text":"<h3>The game</h3> The game is a 3D sidescroller, where the player collects coins and avoid getting killed by enemies. There is no big plot or storyline behind the game. If you either collect all the coins, win the game by not dying more than 6 times (or 5) or complete the game in less than 6 minutes, you unlock the bonus level.<em>You can see a complete playthrough of the game below. Please keep in mind, that I have edited this video to not show all the times I failed. This makes it seem like objects randomly disappear and my health to go up to 100% out of nowhere.</em><h4>Controls</h4> Keyboard Moving around – WASD keys or Arrow keys Jumping – Space button Interaction – The E button PS4 controller Moving around – Left joystick Jumping – The X button Interaction – The Square button<a href=\"img/verin-run/CollectableTest_unity_-_Rabbit_run_-_PC__Mac___Linux_Standalone__Personal_.png\"><img class=\"alignnone size-full wp-image-411\" src=\"http://jonaskf.net/wp-content/uploads/2015/11/CollectableTest_unity_-_Rabbit_run_-_PC__Mac___Linux_Standalone__Personal_.png\" alt=\"CollectableTest_unity_-_Rabbit_run_-_PC__Mac___Linux_Standalone__Personal_\" width=\"1201\" height=\"315\"/></a><h4>Advancing to the next level</h4> To be able to advance to the next level, you need to find a keycard. This keycard opens some of the doors in the level but not all of them.<h4>How do I unlock the bonus level?</h4> You can unlock the bonus level by collecting all the coins, dying less than 6 times or by completing the whole run form level 1 to 3 in less than 6 minutes.<h4>How to kill enemies</h4> To kill an enemy you simply jump on its head. The Robots and the Monkeys take 1 hit, the turtle takes 2 hits.How to get full healthYou can get back to max health either by dying, or collecting a health potion.<h3>Credits</h3> For the credits list, check out the project document page (<a href=\"http://frigg.hiof.no/spillprg_v155/?page_id=38\" target=\"_blank\">http://frigg.hiof.no/spillprg_v155/?page_id=38</a>).",

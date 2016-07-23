@@ -1,12 +1,12 @@
-import {Component} from '@angular/core';
+import {Component, enableProdMode} from '@angular/core';
 import {NgClass} from '@angular/common';
 import {CV} from './cv.component';
 import {ProjectComponent} from './project.component';
 import {ProjectService} from './project.service';
 import {DownloadComponent} from './download.component';
 import {HTTP_PROVIDERS} from '@angular/http';
-//import {RacingDataService} from './racing-data.service';
 
+enableProdMode();
 @Component({
   selector: 'app',
   templateUrl:'app/templates/body.html',
@@ -29,9 +29,7 @@ export class AppComponent{
   }
 
   hashChange(): void{
-    console.log('Hash changed');
     this.currentPage = window.location.hash.replace('#', '').split('/')[0] || 'cv';
-    console.log(this.currentPage);
   }
 
   changePage(target, event){

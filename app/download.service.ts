@@ -9,7 +9,6 @@ export class DownloadService{
 
   getDownloads(){
     return this.http.get('app/data/downloads.json')
-      .map(response => <Download[]>function(r){ console.log(r); return r;  }(response.json()));
+      .map(response => <Download[]>function(r){ return r;  }(response.json()));
   }
-
 }

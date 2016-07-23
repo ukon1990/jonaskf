@@ -15,7 +15,7 @@ var project_component_1 = require('./project.component');
 var project_service_1 = require('./project.service');
 var download_component_1 = require('./download.component');
 var http_1 = require('@angular/http');
-//import {RacingDataService} from './racing-data.service';
+core_1.enableProdMode();
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'JonasKF';
@@ -31,9 +31,7 @@ var AppComponent = (function () {
         this.isMenuToggeled = !this.isMenuToggeled;
     };
     AppComponent.prototype.hashChange = function () {
-        console.log('Hash changed');
         this.currentPage = window.location.hash.replace('#', '').split('/')[0] || 'cv';
-        console.log(this.currentPage);
     };
     AppComponent.prototype.changePage = function (target, event) {
         event.preventDefault();

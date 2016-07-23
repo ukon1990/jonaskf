@@ -17,7 +17,7 @@ var DownloadService = (function () {
     }
     DownloadService.prototype.getDownloads = function () {
         return this.http.get('app/data/downloads.json')
-            .map(function (response) { return function (r) { console.log(r); return r; }(response.json()); });
+            .map(function (response) { return function (r) { return r; }(response.json()); });
     };
     DownloadService = __decorate([
         core_1.Injectable(), 

@@ -87,21 +87,21 @@
           "version":"beta 22",
           "date": "4/4-2016",
           "url": [
-            {"platform": "Java", "href": ""}
+            {"platform": "Java", "href": "files/wah/wah-beta-22.zip"}
           ],
           "changes":"<ul><li>Changed the numbering of releases as I found it confusing as to what version number would be correct to assign. The version for this release is Beta 22, next would be Beta 23 and so on.</li><li>Fixed a bug, causing the url for blizz API download not to update upon settings update (requiered a reload of the application before)</li><li>Right clicking an item in any of the tabs in the main window, allows you to open the browser at that items wowhead page. This can be useful if you are wondering where an item drops etc.</li><li>Added two new filters:<ul><li>Vendor sold items - This list contains all the items that are sold from vendors that are auctionable, and has \"VENDOR\" as sourcetype in blizzards API. Some items might appear in the list that should not, but that is a bug on blizzards end.</li><li>Dropped items - This list contains all the items that can be dropped and are auctionable, and contains \"DROP\" as sourcetype in blizzards API. Some items might appear in the list that should not, but that is a bug on blizzards end.</li></ul></li><li>The filtered table should no longer bug out if a list comes up empty handed. It will no instead have a placeholder item telling you why it might be empty.</li><li>Known bugs:<ul><li>The filtered table should properly add filtered items if the user does not have any WoWuction data available. However, the blizzard auction tab and tooltips won't work.</li><li>If there is WoWuction data available, the fitlered tab won't work, unless you go to \"file -> force refresh filter list\"</li><li>If there are more bugs that I might not be aware of, please post them in the thread @ stormspire (http://stormspire.net/tools-programs-spreadsheets/16083-wow-auction-helper-java-aka-multiplatform.html).</li></ul></li></ul>"
         },{
           "version":"0.9.9.8",
           "date":"15/3-2016",
           "url": [
-            {"platform": "Java", "href": ""}
+            {"platform": "Java", "href": "files/wah/wah-v.0.9.9.8.zip"}
           ],
           "changes":"<ul><li>A bug, causing some items to get listed with a production cost of 0 should now have been fixed. Do keep in mind that some items might actually not exist at AH, and will then be listed as 0 if that is the case.If it isn't please notify me at the forum.</li><li>The tables should no longer update twice when the application starts up.</li><li>Fixed it so that character names no longer are case-sensitive. The setup wizard sets character names as lowercase, so this should no longer cause problems.</li></ul>"
         },{
           "version":"0.9.9.7.1",
           "date":"15/3-2016",
           "url": [
-            {"platform": "Java", "href": ""}
+            {"platform": "Java", "href": "files/wah/wah-v.0.9.9.7.1_.zip"}
           ],
           "changes":"<ul><li>Fixed a bug in the add material and C.O.D dialog windows, where the item name would not be downloaded automatically.</li><li>The changelog window is now scrollable.</li></ul>"
         },
@@ -109,7 +109,7 @@
           "version":"0.9.9.7",
           "date":"14/3-2016",
           "url": [
-            {"platform": "Java", "href": ""}
+            {"platform": "Java", "href": "files/wah/wah-v.0.9.9.7.zip"}
           ],
           "changes":"<ul><li>Imporved the setup wizard for first time users.</li><li>Fixed a problem where the app did not use the new API url paired with a API key.</li><li>The update dialog now shows a changelog.</li><li>The color scheme of the app should now be the same all over the place.</li><li>Some new recepies are added (But not all of them have been assigned to a profession etc).</li></ul>"
          }

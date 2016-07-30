@@ -18,6 +18,10 @@ $color__dark: #000000;
 .hide {
   display: none; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
 body {
   background: #000000; }
 
@@ -135,10 +139,11 @@ header {
   #content .show .download .more {
     display: none; }
   #content .show .download.foreground {
+    position: absolute;
     margin-left: -1em;
     z-index: 1;
     background: #FFF;
-    width: 100%;
+    width: 80%;
     padding: 1em;
     top: 0;
     margin-top: 3em;
@@ -204,6 +209,10 @@ header {
       z-index: 3;
       display: inline-block;
       width: 100% !important; }
+
+iframe {
+  max-width: 100%;
+  max-height: auto; }
 
 @media screen and (max-width: 900px) {
   .project {
@@ -281,6 +290,8 @@ header {
     width: auto; }
     #content .child {
       width: 100%; }
+      #content .child .foreground {
+        width: 90% !important; }
 
   .project {
     /*width: calc( 100% - 1em ) !important;*/ } }

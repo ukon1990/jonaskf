@@ -1,4 +1,9 @@
 //Design
+
+img{
+  max-width: 100%;
+  height: auto;
+}
 body{
   background: $color__dark;
 }
@@ -124,10 +129,11 @@ header{
       display: none;
     }
     &.foreground{
+      position: absolute;
       margin-left: -1em;
       z-index: 1;
       background: $color__light;
-      width: 100%;
+      width: 80%;
       padding: 1em;
       top: 0;
       margin-top: $size__header-height;
@@ -200,4 +206,9 @@ header{
           width: 100% !important;
         }
     }
+}
+
+iframe{
+  max-width:100%;
+  max-height: auto;
 }

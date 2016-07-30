@@ -23,7 +23,6 @@ var ProjectComponent = (function () {
             .subscribe(function (projects) { return _this.projects = projects; }, function (error) { return console.log(error); });
     };
     ProjectComponent.prototype.setFilter = function (tech) {
-        console.log(tech);
         if (this.technologyFilter.indexOf(tech) === -1) {
             this.technologyFilter.push(tech);
         }
@@ -39,7 +38,6 @@ var ProjectComponent = (function () {
             for (var _i = 0, a_1 = a; _i < a_1.length; _i++) {
                 var i = a_1[_i];
                 if (this.technologyFilter.indexOf(i) !== -1) {
-                    console.log(i);
                     match = true;
                     break;
                 }

@@ -41,10 +41,12 @@ var DownloadComponent = (function () {
             this.foreground = '';
             this.fullscreenImg = -1;
             window.history.pushState('s', 'a', window.location.hash.split('/')[0]);
+            window.scrollTo(0, 0);
         }
         else {
             this.foreground = project;
             window.history.pushState('s', 'a', window.location.hash.split('/')[0] + '/' + project);
+            window.scrollTo(0, 0);
         }
     };
     DownloadComponent.prototype.arrayToString = function (arr) {

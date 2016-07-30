@@ -19,12 +19,12 @@ export class AppComponent{
   previousPage: string = '';
   isMenuToggeled: boolean = false;
 
-  ngOnInit(){
+  ngOnInit(): void{
     this.currentPage = window.location.hash.replace('#', '').split('/')[0] || 'cv';
     window.addEventListener("hashchange", this.hashChange, false);
   }
 
-  menuToggle(){
+  menuToggle(): void{
     this.isMenuToggeled = !this.isMenuToggeled;
   }
 
@@ -32,7 +32,7 @@ export class AppComponent{
     this.currentPage = window.location.hash.replace('#', '').split('/')[0] || 'cv';
   }
 
-  changePage(target, event){
+  changePage(target, event): void{
     event.preventDefault();
     window.history.pushState('s','a', '#' + target);
     if(this.currentPage !== target){

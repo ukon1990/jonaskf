@@ -16,7 +16,7 @@ export class ProjectComponent{
   technologyFilter: string[] = [];
 
   constructor(private projectService: ProjectService){}
-  ngOnInit(){
+  ngOnInit(): void{
     this.projects = this.projectService.getProjects()
       .subscribe(
         projects => this.projects = projects,
@@ -25,7 +25,6 @@ export class ProjectComponent{
   }
 
   setFilter(tech: string): void{
-    console.log(tech);
     if(this.technologyFilter.indexOf(tech) === -1){
       this.technologyFilter.push(tech);
     }else{
@@ -34,12 +33,11 @@ export class ProjectComponent{
     }
   }
   //Checking if a project matches a given tag
-  matchFilter(a: string[]){
+  matchFilter(a: string[]): string{
     let match: boolean = false;
     if(this.technologyFilter.length !== 0){
       for(let i of a){
         if(this.technologyFilter.indexOf(i) !== -1){
-          console.log(i);
           match = true;
           break;
         }

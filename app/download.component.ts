@@ -26,7 +26,7 @@ export class DownloadComponent{
       this.foreground = window.location.hash.replace('#', '').split('/')[1];
   }
 
-  imgClick(index){
+  imgClick(index): void{
     if(this.fullscreenImg !== index){
       this.fullscreenImg = index;
     }else{
@@ -34,7 +34,7 @@ export class DownloadComponent{
     }
   }
 
-  test(v){
+  test(v): void{
     console.log(v);
     return 'https://www.youtube.com/embed/S8Y2vCt25rA?feature=oembed';
   }
@@ -44,9 +44,11 @@ export class DownloadComponent{
       this.foreground = '';
       this.fullscreenImg = -1;
       window.history.pushState('s','a', window.location.hash.split('/')[0]);
+      window.scrollTo(0,0);
     }else{
       this.foreground = project;
       window.history.pushState('s','a', window.location.hash.split('/')[0] + '/' + project);
+      window.scrollTo(0,0);
     }
   }
 

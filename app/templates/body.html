@@ -13,7 +13,7 @@
 </header>
 <div id="content">
   <!-- Resume -->
-  <cv [ngClass]="{show: currentPage === 'cv', previous: previousPage === 'cv'}" class="child"></cv>
-  <projects [ngClass]="{show: currentPage === 'projects', previous: previousPage === 'projects'}" class="child"></projects>
-  <downloads [ngClass]="{show: currentPage === 'downloads', previous: previousPage === 'downloads'}" class="child"></downloads>
+  <cv *ngIf="currentPage === 'cv'" class="child show"></cv>
+  <projects *ngIf="currentPage === 'projects'" class="child show"></projects>
+  <downloads *ngIf="currentPage === 'downloads'" class="child show"></downloads>
 </div>

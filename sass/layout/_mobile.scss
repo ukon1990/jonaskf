@@ -64,6 +64,9 @@
     width: auto;
     .child{
       width: 100%;
+      .foreground{
+        width: 90% !important;
+      }
     }
   }
   .project{

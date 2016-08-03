@@ -33,7 +33,7 @@ export class ProjectComponent{
     }
   }
   //Checking if a project matches a given tag
-  matchFilter(a: string[]): string{
+  matchFilter(a: string[]): boolean{
     let match: boolean = false;
     if(this.technologyFilter.length !== 0){
       for(let i of a){

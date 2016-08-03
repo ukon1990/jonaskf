@@ -18,7 +18,7 @@ var http_1 = require('@angular/http');
 core_1.enableProdMode();
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'JonasKF';
+        this.title = 'Jonas K.Flønes';
         this.currentPage = '';
         this.previousPage = '';
         this.isMenuToggeled = false;

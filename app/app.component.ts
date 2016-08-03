@@ -14,7 +14,7 @@ enableProdMode();
   providers: [ProjectService, HTTP_PROVIDERS]
 })
 export class AppComponent{
-  title = 'JonasKF';
+  title = 'Jonas K.Flønes';
   currentPage: string = '';
   previousPage: string = '';
   isMenuToggeled: boolean = false;

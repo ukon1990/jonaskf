@@ -20,7 +20,7 @@ header{
   #title{
     margin: 0.5em;
     padding-left: 64px;
-    background: url( 'icons/logo.svg') no-repeat;
+    background: url( 'icons/logo.svg') no-repeat left center;
     float:left;
     display:inline-block;
     h1{
@@ -48,6 +48,9 @@ header{
           @include transition(background 1s, box-shadow 1s);
           &:hover{
             background: $color__medium-light;
+            filter: blur(5px);
+            opacity: 0.5;
+            filter: alpha(opacity=50); /* For IE8 and earlier */
             @include box-shadow($color__shadow !important);
             @include transition(background 1s, box-shadow 1s);
           }

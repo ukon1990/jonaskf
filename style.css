@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* grønt tema
+/* gr├©nt tema
 $color__light: #009733;
 $color__medium-light: #007628;
 $color__medium: #00561D;
@@ -17,6 +17,10 @@ $color__dark: #000000;
 
 .hide {
   display: none; }
+
+#title h1 {
+  font-family: "franklin-gothic-urw", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1), 7px 7px 0px rgba(0, 0, 0, 0.05); }
 
 img {
   max-width: 100%;
@@ -42,7 +46,7 @@ header {
   header #title {
     margin: 0.5em;
     padding-left: 64px;
-    background: url("icons/logo.svg") no-repeat;
+    background: url("icons/logo.svg") no-repeat left center;
     float: left;
     display: inline-block; }
     header #title h1 {
@@ -72,6 +76,10 @@ header {
         transition: background 1s, box-shadow 1s; }
         header nav ul li a:hover {
           background: #9B9999;
+          filter: blur(5px);
+          opacity: 0.5;
+          filter: alpha(opacity=50);
+          /* For IE8 and earlier */
           -webkit-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.21) !important;
           -moz-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.21) !important;
           box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.21) !important;

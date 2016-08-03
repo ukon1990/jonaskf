@@ -1,6 +1,6 @@
 import {Component, enableProdMode} from '@angular/core';
 import {NgClass} from '@angular/common';
-import {CV} from './cv.component';
+import {CVComponent} from './cv.component';
 import {ProjectComponent} from './project.component';
 import {ProjectService} from './project.service';
 import {DownloadComponent} from './download.component';
@@ -10,7 +10,7 @@ enableProdMode();
 @Component({
   selector: 'app',
   templateUrl:'app/templates/body.html',
-  directives: [NgClass, CV, ProjectComponent, DownloadComponent],
+  directives: [NgClass, CVComponent, ProjectComponent, DownloadComponent],
   providers: [ProjectService, HTTP_PROVIDERS]
 })
 export class AppComponent{

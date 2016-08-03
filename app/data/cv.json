@@ -1,5 +1,7 @@
 {
-    "name": "Jonas Kossai Flønes",
+    "givenName": "Jonas",
+    "additionalName": "Kossai",
+    "familyName": "Flønes",
     "mail": "mail@jonaskf.net",
     "nationality": "Norwegian",
     "occupation": "Freelance web developer",
@@ -39,11 +41,11 @@
                     },{
                         "name": "ES6",
                         "fromYear": 2016,
-                        "rating": 3.5
+                        "rating": 3
                     },{
                         "name": "TypeScript",
                         "fromYear": 2016,
-                        "rating": 3.5
+                        "rating": 3
                     }
                 ]
             },{
@@ -53,7 +55,7 @@
                 "rating": 3,
                 "subSkill": [
                     {
-                        "name":"Wordpress themes",
+                        "name":"Wordpress",
                         "fromYear": 2015,
                         "rating": 4
                     }
@@ -70,7 +72,7 @@
                 "name": "Swift",
                 "icon":"",
                 "fromYear": 2015,
-                "rating": 2.5,
+                "rating": 2,
                 "subSkill": [
                     
                 ]

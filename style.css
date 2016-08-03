@@ -92,6 +92,24 @@ header {
           font-weight: bold;
           text-decoration: underline; }
 
+.skill-programming {
+  clear: both; }
+  .skill-programming .skill {
+    width: 10em !important;
+    padding: 0.25em;
+    margin: 0.25em;
+    display: inline-block;
+    float: left; }
+    .skill-programming .skill img.logo {
+      height: 2em !important; }
+    .skill-programming .skill .sub-skills {
+      position: relative;
+      display: inline-block;
+      margin-top: 0.5em; }
+      .skill-programming .skill .sub-skills .sub-skill {
+        display: inline-block;
+        width: 100%; }
+
 #content {
   overflow: hidden;
   overflow-y: visible;
@@ -221,6 +239,30 @@ header {
 iframe {
   max-width: 100%;
   max-height: auto; }
+
+/* icons */
+.rating {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  float: right;
+  width: 3em;
+  height: 0.5em; }
+
+.rating-1 {
+  background-image: url("icons/rating-1.svg"); }
+
+.rating-2 {
+  background-image: url("icons/rating-2.svg"); }
+
+.rating-3 {
+  background-image: url("icons/rating-3.svg"); }
+
+.rating-4 {
+  background-image: url("icons/rating-4.svg"); }
+
+.rating-5 {
+  background-image: url("icons/rating-5.svg"); }
 
 @media screen and (max-width: 900px) {
   .project {

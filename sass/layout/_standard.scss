@@ -12,11 +12,11 @@ header{
   right: 0; left: 0; top: 0;
   position: fixed;
   z-index: 2;
-  width:100%;
+  width: 100%;
   height: $size__header-height;
   background: url('img/banner.jpg') no-repeat/*$color__light*/;
   background-size: cover;
-  padding:0;
+  padding: 0;
   #title{
     margin: 0.5em;
     padding-left: 64px;
@@ -59,6 +59,28 @@ header{
             text-decoration: underline;
           }
         }
+      }
+    }
+  }
+}
+.skill-programming{
+  clear: both;
+  .skill{
+    width: 10em !important;
+    padding: 0.25em;
+    margin: 0.25em;
+    display: inline-block;
+    float: left;
+    img.logo{
+      height: 2em !important;
+    }
+    .sub-skills{
+      position: relative;
+      display: inline-block;
+      margin-top: 0.5em;
+      .sub-skill{
+        display: inline-block;
+        width: 100%;
       }
     }
   }
@@ -214,4 +236,30 @@ header{
 iframe{
   max-width:100%;
   max-height: auto;
+}
+
+
+/* icons */
+.rating{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  float: right;
+  width: 3em;
+  height:0.5em;
+}
+.rating-1{
+  background-image: url('icons/rating-1.svg');
+}
+.rating-2{
+  background-image: url('icons/rating-2.svg');
+}
+.rating-3{
+  background-image: url('icons/rating-3.svg');
+}
+.rating-4{
+  background-image: url('icons/rating-4.svg');
+}
+.rating-5{
+  background-image: url('icons/rating-5.svg');
 }

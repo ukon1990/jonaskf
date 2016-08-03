@@ -15,6 +15,14 @@ var CVService = (function () {
     function CVService(http) {
         this.http = http;
     }
+    CVService.prototype.get = function () {
+        return this.http.get('app/data/cv.json')
+            .map(function (response) { return function (r) { console.log(r.skills.programming); return r; }(response.json()); });
+    };
+    CVService.prototype.getSkills = function () {
+        return this.http.get('app/data/cv.json')
+            .map(function (response) { return response.json().skills; });
+    };
     CVService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])

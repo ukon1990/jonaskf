@@ -50,7 +50,7 @@ var AppComponent = (function () {
         core_1.Component({
             selector: 'app',
             templateUrl: 'app/templates/body.html',
-            directives: [common_1.NgClass, cv_component_1.CV, project_component_1.ProjectComponent, download_component_1.DownloadComponent],
+            directives: [common_1.NgClass, cv_component_1.CVComponent, project_component_1.ProjectComponent, download_component_1.DownloadComponent],
             providers: [project_service_1.ProjectService, http_1.HTTP_PROVIDERS]
         }), 
         __metadata('design:paramtypes', [])

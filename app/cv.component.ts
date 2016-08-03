@@ -1,4 +1,7 @@
 import {Component} from '@angular/core';
+import {NgClass} from '@angular/common';
+import {Project} from './cv';
+import {ProjectService} from './cv.service';
 
 @Component({
   selector: 'cv',

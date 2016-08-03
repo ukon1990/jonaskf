@@ -1,0 +1,114 @@
+{
+    "name": "Jonas Kossai Flønes",
+    "mail": "mail@jonaskf.net",
+    "nationality": "Norwegian",
+    "occupation": "Freelance web developer",
+    "company": "Østfold University College",
+    "skills": {
+        "programming":[
+            {
+            "name": "Java",
+            "icon":"",
+            "fromYear": 2013,
+            "rating": 4,
+            "subSkill": [
+
+                ]
+            },{
+                "name": "C#",
+                "icon":"",
+                "fromYear": 2014,
+                "rating": 3,
+                "subSkill": [
+                    
+                ]
+            },{
+                "name": "JavaScript",
+                "icon":"",
+                "fromYear": 2013,
+                "rating": 4,
+                "subSkill": [
+                    {
+                        "name": "Angular 2",
+                        "fromYear": 2016,
+                        "rating": 3
+                    },{
+                        "name": "jQuery",
+                        "fromYear": 2016,
+                        "rating": 4
+                    },{
+                        "name": "ES6",
+                        "fromYear": 2016,
+                        "rating": 3.5
+                    },{
+                        "name": "TypeScript",
+                        "fromYear": 2016,
+                        "rating": 3.5
+                    }
+                ]
+            },{
+                "name": "php",
+                "icon":"",
+                "fromYear": 2013,
+                "rating": 3,
+                "subSkill": [
+                    {
+                        "name":"Wordpress themes",
+                        "fromYear": 2015,
+                        "rating": 4
+                    }
+                ]
+            },{
+                "name": "Shell scripting",
+                "icon":"",
+                "fromYear": 2015,
+                "rating": 2,
+                "subSkill": [
+                    
+                ]
+            },{
+                "name": "Swift",
+                "icon":"",
+                "fromYear": 2015,
+                "rating": 2.5,
+                "subSkill": [
+                    
+                ]
+            },{
+                "name": "C",
+                "icon":"",
+                "fromYear": 2015,
+                "rating": 2,
+                "subSkill": [
+                    
+                ]
+            }
+        ],
+        "os": [
+            {
+                "name": "Windows",
+                "icon": "",
+                "rating": 4
+            },{
+                "name": "Linux",
+                "icon": "",
+                "rating": 4
+            },{
+                "name": "macOS",
+                "icon": "",
+                "rating": 4
+            }
+        ],
+        "languages": [
+            {
+                "name": "Norwegian",
+                "icon": "",
+                "rating": "native"
+            },{
+                "name": "English",
+                "icon": "",
+                "rating": "fluent"
+            }
+        ]
+    }
+}

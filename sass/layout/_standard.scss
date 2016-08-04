@@ -49,7 +49,6 @@ header{
           &:hover{
             background: $color__medium-light;
             filter: blur(5px);
-            opacity: 0.5;
             filter: alpha(opacity=50); /* For IE8 and earlier */
             @include box-shadow($color__shadow !important);
             @include transition(background 1s, box-shadow 1s);
@@ -72,7 +71,9 @@ header{
     display: inline-block;
     float: left;
     img.logo{
-      height: 2em !important;
+      max-height: 2em !important;
+      max-width: 3em;
+      padding-right: 0.5em;
     }
     .sub-skills{
       position: relative;
@@ -238,13 +239,18 @@ iframe{
   max-height: auto;
 }
 
+button{
+  color: $color__light;
+  background: $color__medium-dark;
+  border: 1px solid;
+  padding: 0.25em;
+}
 
 /* icons */
 .rating{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  float: right;
   width: 3em;
   height:0.5em;
 }

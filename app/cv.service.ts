@@ -9,7 +9,7 @@ export class CVService{
   
   get(){
       return this.http.get('app/data/cv.json')
-      .map(response => <CV>function(r){ console.log(r.skills.programming); return r;  }(response.json()));
+      .map(response => <CV>function(r){ return r;  }(response.json()));
   }
   getSkills(){
       return this.http.get('app/data/cv.json')

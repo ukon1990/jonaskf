@@ -77,7 +77,6 @@ header {
         header nav ul li a:hover {
           background: #9B9999;
           filter: blur(5px);
-          opacity: 0.5;
           filter: alpha(opacity=50);
           /* For IE8 and earlier */
           -webkit-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.21) !important;
@@ -101,7 +100,9 @@ header {
     display: inline-block;
     float: left; }
     .skill-programming .skill img.logo {
-      height: 2em !important; }
+      max-height: 2em !important;
+      max-width: 3em;
+      padding-right: 0.5em; }
     .skill-programming .skill .sub-skills {
       position: relative;
       display: inline-block;
@@ -240,12 +241,17 @@ iframe {
   max-width: 100%;
   max-height: auto; }
 
+button {
+  color: #FFF;
+  background: #2F2F2F;
+  border: 1px solid;
+  padding: 0.25em; }
+
 /* icons */
 .rating {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  float: right;
   width: 3em;
   height: 0.5em; }
 

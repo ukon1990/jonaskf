@@ -17,7 +17,7 @@ var CVService = (function () {
     }
     CVService.prototype.get = function () {
         return this.http.get('app/data/cv.json')
-            .map(function (response) { return function (r) { console.log(r.skills.programming); return r; }(response.json()); });
+            .map(function (response) { return function (r) { return r; }(response.json()); });
     };
     CVService.prototype.getSkills = function () {
         return this.http.get('app/data/cv.json')

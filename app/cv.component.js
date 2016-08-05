@@ -27,6 +27,7 @@ var CVComponent = (function () {
             _this.cv = cv;
             _this.skills = cv.skills;
         }, function (error) { return console.log(error); });
+        this.router.navigate(['/cv']);
     };
     CVComponent = __decorate([
         core_1.Component({

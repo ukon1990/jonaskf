@@ -5,7 +5,7 @@
   <button id="menu" [ngClass]="{toggle: isMenuToggeled}" (click)="menuToggle()">Menu</button>
   <nav [ngClass]="{show: isMenuToggeled}">
     <ul>
-      <li><a (click)="menuToggle()" routerLink="/" routerLinkActive="selected">CV</a></li>
+      <li><a (click)="menuToggle()" routerLink="/cv" routerLinkActive="selected">CV</a></li>
       <li><a (click)="menuToggle()" routerLink="/projects" routerLinkActive="selected">Projects</a></li>
       <li><a (click)="menuToggle()" routerLink="/downloads" routerLinkActive="selected">Downloads</a></li>
     </ul>

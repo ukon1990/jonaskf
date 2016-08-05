@@ -20,12 +20,13 @@ export class CVComponent{
   constructor(private router: Router, private cvService: CVService){}
   ngOnInit(): void{
     this.cv = this.cvService.get()
-          .subscribe(
-            cv => {
-              this.cv = cv
-              this.skills = cv.skills
-            },
-            error => console.log(error)
-          );
+      .subscribe(
+        cv => {
+          this.cv = cv
+          this.skills = cv.skills
+        },
+        error => console.log(error)
+      );
+    this.router.navigate(['/cv']);
   }
 }

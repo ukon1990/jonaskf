@@ -4,7 +4,7 @@ var cv_component_1 = require('./cv.component');
 var project_component_1 = require('./project.component');
 var download_component_1 = require('./download.component');
 var routes = [
-    { path: '', component: cv_component_1.CVComponent },
+    { path: 'cv', component: cv_component_1.CVComponent },
     { path: 'projects', component: project_component_1.ProjectComponent },
     { path: 'downloads', component: download_component_1.DownloadComponent },
     { path: 'downloads/:id', component: download_component_1.DownloadComponent },

@@ -10,9 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var common_1 = require('@angular/common');
+var router_1 = require('@angular/router');
 var project_service_1 = require('./project.service');
 var ProjectComponent = (function () {
-    function ProjectComponent(projectService) {
+    function ProjectComponent(router, projectService) {
+        this.router = router;
         this.projectService = projectService;
         this.projects = {};
         this.technologyFilter = [];
@@ -71,7 +73,7 @@ var ProjectComponent = (function () {
             directives: [common_1.NgClass],
             providers: [project_service_1.ProjectService]
         }), 
-        __metadata('design:paramtypes', [project_service_1.ProjectService])
+        __metadata('design:paramtypes', [router_1.Router, project_service_1.ProjectService])
     ], ProjectComponent);
     return ProjectComponent;
 }());

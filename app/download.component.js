@@ -10,19 +10,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var common_1 = require('@angular/common');
+var router_1 = require('@angular/router');
 var download_service_1 = require('./download.service');
 var DownloadComponent = (function () {
-    function DownloadComponent(downloadService) {
+    function DownloadComponent(route, router, downloadService) {
+        this.route = route;
+        this.router = router;
         this.downloadService = downloadService;
         this.downloads = {};
-        this.foreground = '';
+        this.foreground = undefined;
         this.fullscreenImg = -1;
     }
     DownloadComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.sub = this.route.params.subscribe(function (params) {
+            _this.foreground = params['id'];
+            console.log(_this.foreground);
+        });
         this.downloads = this.downloadService.getDownloads()
             .subscribe(function (downloads) { return _this.downloads = downloads; }, function (error) { return console.log(error); });
-        this.foreground = window.location.hash.replace('#', '').split('/')[1];
+    };
+    DownloadComponent.prototype.ngOnDestroy = function () {
+        this.sub.unsubscribe();
+    };
+    DownloadComponent.prototype.onSelect = function (id) {
+        this.router.navigate(['/downloads', id]);
     };
     DownloadComponent.prototype.imgClick = function (index) {
         if (this.fullscreenImg !== index) {
@@ -38,14 +50,14 @@ var DownloadComponent = (function () {
     };
     DownloadComponent.prototype.readMore = function (project) {
         if (this.foreground === project) {
-            this.foreground = '';
+            this.router.navigate(['/downloads']);
+            this.foreground = undefined;
             this.fullscreenImg = -1;
-            window.history.pushState('s', 'a', window.location.hash.split('/')[0]);
             window.scrollTo(0, 0);
         }
         else {
             this.foreground = project;
-            window.history.pushState('s', 'a', window.location.hash.split('/')[0] + '/' + project);
+            this.router.navigate(['/downloads', project]);
             window.scrollTo(0, 0);
         }
     };
@@ -72,7 +84,7 @@ var DownloadComponent = (function () {
             directives: [common_1.NgClass],
             providers: [download_service_1.DownloadService]
         }), 
-        __metadata('design:paramtypes', [download_service_1.DownloadService])
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, download_service_1.DownloadService])
     ], DownloadComponent);
     return DownloadComponent;
 }());

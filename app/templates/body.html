@@ -5,15 +5,13 @@
   <button id="menu" [ngClass]="{toggle: isMenuToggeled}" (click)="menuToggle()">Menu</button>
   <nav [ngClass]="{show: isMenuToggeled}">
     <ul>
-      <li><a [ngClass]="{selected: currentPage === 'cv'}" (click)="changePage('cv', $event)" href="#cv">CV</a></li>
-      <li><a [ngClass]="{selected: currentPage === 'projects'}" (click)="changePage('projects', $event)" href="#projects">Projects</a></li>
-      <li><a [ngClass]="{selected: currentPage === 'downloads'}" (click)="changePage('downloads', $event)" href="#downloads">Downloads</a></li>
+      <li><a (click)="menuToggle()" routerLink="/" routerLinkActive="selected">CV</a></li>
+      <li><a (click)="menuToggle()" routerLink="/projects" routerLinkActive="selected">Projects</a></li>
+      <li><a (click)="menuToggle()" routerLink="/downloads" routerLinkActive="selected">Downloads</a></li>
     </ul>
   </nav>
 </header>
 <div id="content">
   <!-- Resume -->
-  <cv *ngIf="currentPage === 'cv'" class="child show"></cv>
-  <projects *ngIf="currentPage === 'projects'" class="child show"></projects>
-  <downloads *ngIf="currentPage === 'downloads'" class="child show"></downloads>
+  <router-outlet></router-outlet>
 </div>

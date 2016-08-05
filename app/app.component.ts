@@ -1,17 +1,14 @@
 import {Component, enableProdMode} from '@angular/core';
+import {ROUTER_DIRECTIVES} from '@angular/router';
 import {NgClass} from '@angular/common';
-import {CVComponent} from './cv.component';
-import {ProjectComponent} from './project.component';
-import {ProjectService} from './project.service';
-import {DownloadComponent} from './download.component';
 import {HTTP_PROVIDERS} from '@angular/http';
 
 enableProdMode();
 @Component({
   selector: 'app',
   templateUrl:'app/templates/body.html',
-  directives: [NgClass, CVComponent, ProjectComponent, DownloadComponent],
-  providers: [ProjectService, HTTP_PROVIDERS]
+  directives: [NgClass, ROUTER_DIRECTIVES],
+  providers: [HTTP_PROVIDERS]
 })
 export class AppComponent{
   title = 'Jonas K.Flønes';
@@ -20,8 +17,6 @@ export class AppComponent{
   isMenuToggeled: boolean = false;
 
   ngOnInit(): void{
-    this.currentPage = window.location.hash.replace('#', '').split('/')[0] || 'cv';
-    window.addEventListener("hashchange", this.hashChange, false);
   }
 
   menuToggle(): void{

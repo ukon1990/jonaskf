@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {NgClass} from '@angular/common';
+import {Router} from '@angular/router';
 import {CV} from './cv';
 import {CVService} from './cv.service';
 
@@ -16,7 +17,7 @@ export class CVComponent{
   skills = {};
   year = new Date().getFullYear();
 
-  constructor(private cvService: CVService){}
+  constructor(private router: Router, private cvService: CVService){}
   ngOnInit(): void{
     this.cv = this.cvService.get()
           .subscribe(

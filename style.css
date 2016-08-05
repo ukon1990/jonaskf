@@ -159,29 +159,17 @@ header {
       display: block; }
     #content .project .p-year {
       float: right; }
-  #content .show .download h3 > button {
+  #content .download h3 > button {
     float: right; }
-    #content .show .download h3 > button.toggle {
+    #content .download h3 > button.toggle {
       /*background: url('icons/close.svg') no-repeat transparent;*/ }
-  #content .show .download .more {
+  #content .download .more {
     display: none; }
-  #content .show .download.foreground {
-    position: absolute;
-    margin-left: -1em;
-    z-index: 1;
-    background: #FFF;
-    width: 80%;
-    padding: 1em;
-    top: 0;
-    margin-top: 3em;
-    -webkit-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.21);
-    -moz-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.21);
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.21); }
-    #content .show .download.foreground .more {
-      display: block; }
-    #content .show .download.foreground .dl-link {
-      padding: 0;
-      list-style: none; }
+  #content .download.foreground .more {
+    display: block; }
+  #content .download.foreground .dl-link {
+    padding: 0;
+    list-style: none; }
 
 .cv-left {
   float: left;

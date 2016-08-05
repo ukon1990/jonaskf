@@ -142,7 +142,7 @@ header{
     }
   }
 
-  .show .download{
+  .download{
     h3{
       &> button{
         float: right;
@@ -155,15 +155,6 @@ header{
       display: none;
     }
     &.foreground{
-      position: absolute;
-      margin-left: -1em;
-      z-index: 1;
-      background: $color__light;
-      width: 80%;
-      padding: 1em;
-      top: 0;
-      margin-top: $size__header-height;
-      @include box-shadow($color__shadow);
       .more{
         display: block;
       }

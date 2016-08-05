@@ -1,5 +1,6 @@
-import {Component} from '@angular/core';
+import {Component,OnDestroy, OnInit} from '@angular/core';
 import {NgClass} from '@angular/common';
+import {Router, ActivatedRoute} from '@angular/router';
 import {Download} from './download';
 import {DownloadService} from './download.service';
 
@@ -11,19 +12,33 @@ import {DownloadService} from './download.service';
   providers: [DownloadService]
 })
 
-export class DownloadComponent{
+export class DownloadComponent implements OnDestroy, OnInit{
   downloads = {};
-  foreground: string = '';
+  foreground: string = undefined;
+  sub: any;
   fullscreenImg: number = -1;
 
-  constructor(private downloadService: DownloadService){}
+  constructor(private route: ActivatedRoute, private router: Router, private downloadService: DownloadService){}
   ngOnInit(): void{
+    this.sub = this.route.params.subscribe(
+      params => {
+        this.foreground = params['id'];
+        console.log(this.foreground);
+      }
+    );
     this.downloads = this.downloadService.getDownloads()
       .subscribe(
         downloads => this.downloads = downloads,
         error => console.log(error)
       );
-      this.foreground = window.location.hash.replace('#', '').split('/')[1];
+  }
+
+  ngOnDestroy() {
+      this.sub.unsubscribe();
+  }
+
+  onSelect(id: string) {
+    this.router.navigate(['/downloads', id]);
   }
 
   imgClick(index): void{
@@ -41,13 +56,13 @@ export class DownloadComponent{
 
   readMore(project): void{
     if(this.foreground === project){
-      this.foreground = '';
+      this.router.navigate(['/downloads']);
+      this.foreground = undefined;
       this.fullscreenImg = -1;
-      window.history.pushState('s','a', window.location.hash.split('/')[0]);
       window.scrollTo(0,0);
     }else{
       this.foreground = project;
-      window.history.pushState('s','a', window.location.hash.split('/')[0] + '/' + project);
+      this.router.navigate(['/downloads', project]);
       window.scrollTo(0,0);
     }
   }

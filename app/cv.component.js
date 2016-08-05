@@ -10,9 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var common_1 = require('@angular/common');
+var router_1 = require('@angular/router');
 var cv_service_1 = require('./cv.service');
 var CVComponent = (function () {
-    function CVComponent(cvService) {
+    function CVComponent(router, cvService) {
+        this.router = router;
         this.cvService = cvService;
         this.cv = {};
         this.skills = {};
@@ -34,7 +36,7 @@ var CVComponent = (function () {
             directives: [common_1.NgClass],
             providers: [cv_service_1.CVService]
         }), 
-        __metadata('design:paramtypes', [cv_service_1.CVService])
+        __metadata('design:paramtypes', [router_1.Router, cv_service_1.CVService])
     ], CVComponent);
     return CVComponent;
 }());

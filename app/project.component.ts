@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {NgClass} from '@angular/common';
+import {Router} from '@angular/router';
 import {Project} from './project';
 import {ProjectService} from './project.service';
 
@@ -15,7 +16,7 @@ export class ProjectComponent{
   projects = {};
   technologyFilter: string[] = [];
 
-  constructor(private projectService: ProjectService){}
+  constructor(private router: Router, private projectService: ProjectService){}
   ngOnInit(): void{
     this.projects = this.projectService.getProjects()
       .subscribe(

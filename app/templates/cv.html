@@ -24,13 +24,13 @@
                     <img class="logo float-left" [src]="p.icon" />
                     <div class="float-left">
                         <em>{{p.name}}</em><br>
-                        Year {{year - p.fromYear + 1}} - <div class="rating float-right rating-{{p.rating}}"></div>
+                        In year {{year - p.fromYear + 1}} - <div class="rating float-right rating-{{p.rating}}"></div>
                     </div>
                 </div>
                 <div class="sub-skills">
                     <div class="sub-skill" *ngFor="let s of p.subSkill">
                         {{s.name}} <div class="rating float-right rating-{{s.rating}}"></div>
-                    </div>    
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* gr├©nt tema
+/* grønt tema
 $color__light: #009733;
 $color__medium-light: #007628;
 $color__medium: #00561D;
@@ -94,7 +94,7 @@ header {
 .skill-programming {
   clear: both; }
   .skill-programming .skill {
-    width: 10em !important;
+    width: 12em !important;
     padding: 0.25em;
     margin: 0.25em;
     display: inline-block;

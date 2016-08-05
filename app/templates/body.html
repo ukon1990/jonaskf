@@ -1,6 +1,6 @@
 <header>
   <div id="title">
-    <h1>{{title}}</h1>
+    <a (click)="changePage('cv', $event)" href="#cv"><h1>{{title}}</h1></a>
   </div>
   <button id="menu" [ngClass]="{toggle: isMenuToggeled}" (click)="menuToggle()">Menu</button>
   <nav [ngClass]="{show: isMenuToggeled}">

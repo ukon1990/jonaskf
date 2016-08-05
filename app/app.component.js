@@ -14,13 +14,23 @@ var common_1 = require('@angular/common');
 var http_1 = require('@angular/http');
 core_1.enableProdMode();
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(router) {
+        this.router = router;
         this.title = 'Jonas K.Flønes';
         this.currentPage = '';
         this.previousPage = '';
         this.isMenuToggeled = false;
     }
     AppComponent.prototype.ngOnInit = function () {
+        //Redirecting old links to new ones
+        if (window.location.pathname === '/showcase/development/android-development') {
+            window.history.pushState('', '', 'downloads/eatable');
+            location.reload();
+        }
+        else if (window.location.pathname === '/showcase/development/vermin-run') {
+            window.history.pushState('', '', 'downloads/vermin-run');
+            location.reload();
+        }
     };
     AppComponent.prototype.menuToggle = function () {
         this.isMenuToggeled = !this.isMenuToggeled;
@@ -48,7 +58,7 @@ var AppComponent = (function () {
             directives: [common_1.NgClass, router_1.ROUTER_DIRECTIVES],
             providers: [http_1.HTTP_PROVIDERS]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router])
     ], AppComponent);
     return AppComponent;
 }());

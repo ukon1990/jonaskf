@@ -1,5 +1,5 @@
 import {Component, enableProdMode} from '@angular/core';
-import {ROUTER_DIRECTIVES} from '@angular/router';
+import {Router, ROUTER_DIRECTIVES} from '@angular/router';
 import {NgClass} from '@angular/common';
 import {HTTP_PROVIDERS} from '@angular/http';
 
@@ -16,7 +16,16 @@ export class AppComponent{
   previousPage: string = '';
   isMenuToggeled: boolean = false;
 
+  constructor(private router: Router){}
   ngOnInit(): void{
+    //Redirecting old links to new ones
+    if(window.location.pathname === '/showcase/development/android-development'){
+      window.history.pushState('', '', 'downloads/eatable');
+      location.reload();
+    }else if(window.location.pathname === '/showcase/development/vermin-run'){
+      window.history.pushState('', '', 'downloads/vermin-run');
+      location.reload();
+    }
   }
 
   menuToggle(): void{

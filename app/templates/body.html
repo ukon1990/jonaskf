@@ -1,6 +1,6 @@
 <header>
   <div id="title">
-    <a (click)="changePage('cv', $event)" href="#cv"><h1>{{title}}</h1></a>
+    <a routerLink="/cv"><h1>{{title}}</h1></a>
   </div>
   <button id="menu" [ngClass]="{toggle: isMenuToggeled}" (click)="menuToggle()">Menu</button>
   <nav [ngClass]="{show: isMenuToggeled}">

@@ -22,12 +22,14 @@ var AppComponent = (function () {
         this.isMenuToggeled = false;
     }
     AppComponent.prototype.ngOnInit = function () {
+        console.log(window.location.pathname);
         //Redirecting old links to new ones
-        if (window.location.pathname === '/showcase/development/android-development') {
+        if (window.location.pathname == '/showcase/development/android-development') {
+            console.log('da');
             window.history.pushState('', '', 'downloads/eatable');
             location.reload();
         }
-        else if (window.location.pathname === '/showcase/development/vermin-run') {
+        else if (window.location.pathname == '/showcase/development/vermin-run') {
             window.history.pushState('', '', 'downloads/vermin-run');
             location.reload();
         }

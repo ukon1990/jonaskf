@@ -5,6 +5,7 @@
     "mail": "mail@jonaskf.net",
     "nationality": "Norwegian",
     "occupation": "Freelance web developer",
+    "github": "https://github.com/ukon1990/",
     "company": "Østfold University College",
     "skills": {
         "programming":[
@@ -22,7 +23,7 @@
                 "fromYear": 2014,
                 "rating": 3,
                 "subSkill": [
-                    
+
                 ]
             },{
                 "name": "JavaScript",
@@ -63,7 +64,7 @@
                 "fromYear": 2015,
                 "rating": 2,
                 "subSkill": [
-                    
+
                 ]
             },{
                 "name": "Swift",
@@ -71,7 +72,7 @@
                 "fromYear": 2015,
                 "rating": 2,
                 "subSkill": [
-                    
+
                 ]
             },{
                 "name": "C",
@@ -79,7 +80,7 @@
                 "fromYear": 2015,
                 "rating": 1,
                 "subSkill": [
-                    
+
                 ]
             }
         ],

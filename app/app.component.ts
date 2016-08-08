@@ -6,7 +6,25 @@ import {HTTP_PROVIDERS} from '@angular/http';
 enableProdMode();
 @Component({
   selector: 'app',
-  templateUrl:'app/templates/body.html',
+  template:`
+    <header>
+      <div id="title">
+        <a routerLink="/cv"><h1>{{title}}</h1></a>
+      </div>
+      <button id="menu" [ngClass]="{toggle: isMenuToggeled}" (click)="menuToggle()">Menu</button>
+      <nav [ngClass]="{show: isMenuToggeled}">
+        <ul>
+          <li><a (click)="menuToggle()" routerLink="/cv" routerLinkActive="selected">CV</a></li>
+          <li><a (click)="menuToggle()" routerLink="/projects" routerLinkActive="selected">Projects</a></li>
+          <li><a (click)="menuToggle()" routerLink="/downloads" routerLinkActive="selected">Downloads</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="content">
+      <!-- Resume -->
+      <router-outlet></router-outlet>
+    </div>
+  `,
   directives: [NgClass, ROUTER_DIRECTIVES],
   providers: [HTTP_PROVIDERS]
 })
@@ -18,10 +36,8 @@ export class AppComponent{
 
   constructor(private router: Router){}
   ngOnInit(): void{
-    console.log(window.location.pathname);
     //Redirecting old links to new ones
     if(window.location.pathname == '/showcase/development/android-development'){
-      console.log('da');
       window.history.pushState('', '', 'downloads/eatable');
       location.reload();
     }else if(window.location.pathname == '/showcase/development/vermin-run'){

@@ -8,24 +8,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var http_1 = require('@angular/http');
+const core_1 = require('@angular/core');
+const http_1 = require('@angular/http');
 require('rxjs/add/operator/map');
-var ProjectService = (function () {
-    function ProjectService(http) {
+let ProjectService = class ProjectService {
+    constructor(http) {
         this.http = http;
     }
-    ProjectService.prototype.getProjects = function () {
+    getProjects() {
         return this.http.get('app/data/projects.json')
-            .map(function (response) { return function (r) {
-            var tags = [];
-            var projects = r.projects.sort(function (a, b) {
+            .map(response => function (r) {
+            let tags = [];
+            let projects = r.projects.sort(function (a, b) {
                 return a.year < b.year;
             });
-            for (var _i = 0, _a = r.projects; _i < _a.length; _i++) {
-                var p = _a[_i];
-                for (var _b = 0, _c = p.technologies; _b < _c.length; _b++) {
-                    var t = _c[_b];
+            for (let p of r.projects) {
+                for (let t of p.technologies) {
                     if (tags.indexOf(t) == -1) {
                         tags.push(t);
                     }
@@ -34,13 +32,12 @@ var ProjectService = (function () {
             r.technologies = tags;
             r.projects = projects;
             return r;
-        }(response.json()); });
-    };
-    ProjectService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
-    ], ProjectService);
-    return ProjectService;
-}());
+        }(response.json()));
+    }
+};
+ProjectService = __decorate([
+    core_1.Injectable(), 
+    __metadata('design:paramtypes', [http_1.Http])
+], ProjectService);
 exports.ProjectService = ProjectService;
 //# sourceMappingURL=project.service.js.map

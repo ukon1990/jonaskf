@@ -8,24 +8,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var common_1 = require('@angular/common');
-var http_1 = require('@angular/http');
+const core_1 = require('@angular/core');
+const router_1 = require('@angular/router');
+const common_1 = require('@angular/common');
+const http_1 = require('@angular/http');
 core_1.enableProdMode();
-var AppComponent = (function () {
-    function AppComponent(router) {
+let AppComponent = class AppComponent {
+    constructor(router) {
         this.router = router;
         this.title = 'Jonas K.Flønes';
         this.currentPage = '';
         this.previousPage = '';
         this.isMenuToggeled = false;
     }
-    AppComponent.prototype.ngOnInit = function () {
-        console.log(window.location.pathname);
+    ngOnInit() {
         //Redirecting old links to new ones
         if (window.location.pathname == '/showcase/development/android-development') {
-            console.log('da');
             window.history.pushState('', '', 'downloads/eatable');
             location.reload();
         }
@@ -33,14 +31,14 @@ var AppComponent = (function () {
             window.history.pushState('', '', 'downloads/vermin-run');
             location.reload();
         }
-    };
-    AppComponent.prototype.menuToggle = function () {
+    }
+    menuToggle() {
         this.isMenuToggeled = !this.isMenuToggeled;
-    };
-    AppComponent.prototype.hashChange = function () {
+    }
+    hashChange() {
         this.currentPage = window.location.hash.replace('#', '').split('/')[0] || 'cv';
-    };
-    AppComponent.prototype.changePage = function (target, event) {
+    }
+    changePage(target, event) {
         event.preventDefault();
         window.history.pushState('s', 'a', '#' + target);
         if (this.currentPage !== target) {
@@ -52,17 +50,34 @@ var AppComponent = (function () {
             this.previousPage = '';
         }
         this.menuToggle();
-    };
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'app',
-            templateUrl: 'app/templates/body.html',
-            directives: [common_1.NgClass, router_1.ROUTER_DIRECTIVES],
-            providers: [http_1.HTTP_PROVIDERS]
-        }), 
-        __metadata('design:paramtypes', [router_1.Router])
-    ], AppComponent);
-    return AppComponent;
-}());
+    }
+};
+AppComponent = __decorate([
+    core_1.Component({
+        selector: 'app',
+        template: `
+    <header>
+      <div id="title">
+        <a routerLink="/cv"><h1>{{title}}</h1></a>
+      </div>
+      <button id="menu" [ngClass]="{toggle: isMenuToggeled}" (click)="menuToggle()">Menu</button>
+      <nav [ngClass]="{show: isMenuToggeled}">
+        <ul>
+          <li><a (click)="menuToggle()" routerLink="/cv" routerLinkActive="selected">CV</a></li>
+          <li><a (click)="menuToggle()" routerLink="/projects" routerLinkActive="selected">Projects</a></li>
+          <li><a (click)="menuToggle()" routerLink="/downloads" routerLinkActive="selected">Downloads</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="content">
+      <!-- Resume -->
+      <router-outlet></router-outlet>
+    </div>
+  `,
+        directives: [common_1.NgClass, router_1.ROUTER_DIRECTIVES],
+        providers: [http_1.HTTP_PROVIDERS]
+    }), 
+    __metadata('design:paramtypes', [router_1.Router])
+], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

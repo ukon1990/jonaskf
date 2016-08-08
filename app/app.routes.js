@@ -1,9 +1,9 @@
 "use strict";
-var router_1 = require('@angular/router');
-var cv_component_1 = require('./cv.component');
-var project_component_1 = require('./project.component');
-var download_component_1 = require('./download.component');
-var routes = [
+const router_1 = require('@angular/router');
+const cv_component_1 = require('./cv.component');
+const project_component_1 = require('./project.component');
+const download_component_1 = require('./download.component');
+const routes = [
     { path: 'cv', component: cv_component_1.CVComponent },
     { path: 'projects', component: project_component_1.ProjectComponent },
     { path: 'downloads', component: download_component_1.DownloadComponent },

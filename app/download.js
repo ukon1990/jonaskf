@@ -1,8 +1,5 @@
 "use strict";
-var Download = (function () {
-    function Download() {
-    }
-    return Download;
-}());
+class Download {
+}
 exports.Download = Download;
 //# sourceMappingURL=download.js.map

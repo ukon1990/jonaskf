@@ -1,8 +1,5 @@
 "use strict";
-var CV = (function () {
-    function CV() {
-    }
-    return CV;
-}());
+class CV {
+}
 exports.CV = CV;
 //# sourceMappingURL=cv.js.map

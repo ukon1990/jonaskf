@@ -8,26 +8,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var http_1 = require('@angular/http');
+const core_1 = require('@angular/core');
+const http_1 = require('@angular/http');
 require('rxjs/add/operator/map');
-var CVService = (function () {
-    function CVService(http) {
+let CVService = class CVService {
+    constructor(http) {
         this.http = http;
     }
-    CVService.prototype.get = function () {
+    get() {
         return this.http.get('app/data/cv.json')
-            .map(function (response) { return function (r) { return r; }(response.json()); });
-    };
-    CVService.prototype.getSkills = function () {
+            .map(response => function (r) { return r; }(response.json()));
+    }
+    getSkills() {
         return this.http.get('app/data/cv.json')
-            .map(function (response) { return response.json().skills; });
-    };
-    CVService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
-    ], CVService);
-    return CVService;
-}());
+            .map(response => response.json().skills);
+    }
+};
+CVService = __decorate([
+    core_1.Injectable(), 
+    __metadata('design:paramtypes', [http_1.Http])
+], CVService);
 exports.CVService = CVService;
 //# sourceMappingURL=cv.service.js.map

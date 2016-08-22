@@ -1,0 +1,16 @@
+<header>
+  <div id="title">
+    <a routerLink="/cv"><h1>{{title}}</h1></a>
+  </div>
+  <button id="menu" [ngClass]="{toggle: isMenuToggeled}" (click)="menuToggle()">Menu</button>
+  <nav [ngClass]="{show: isMenuToggeled}">
+    <ul>
+      <li><a (click)="menuToggle()" routerLink="/about" routerLinkActive="selected">About me</a></li>
+      <li><a (click)="menuToggle()" routerLink="/projects" routerLinkActive="selected">Projects</a></li>
+      <li><a (click)="menuToggle()" routerLink="/downloads" routerLinkActive="selected">Downloads</a></li>
+    </ul>
+  </nav>
+</header>
+<div id="content">
+  <router-outlet></router-outlet>
+</div>

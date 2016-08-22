@@ -1,0 +1,23 @@
+<h2>{{title}}</h2>
+    Here are some software that I have worked on in chronological order. All the external links open in a new window.
+    <p>These are projects that I have worked on in my sparetime, paid or as a part of my education.</p>
+    <div id="project-tags">
+      <br><strong>Select technologies to display:</strong><br>
+      <label *ngFor="let tag of projects.technologies">
+        <input (click)="setFilter(tag)" type="checkbox" name="{{tag}}" value="{{tag}}"/> {{tag}}
+      </label>
+    </div>
+    <div class="project" *ngFor="let p of projects.projects" [ngClass]="{show: matchFilter(p.technologies)}">
+      <h3 class="p-name">{{p.name}} <span class="p-year">{{p.year}}</span></h3>
+      <div class="gallery">
+        <img *ngFor="let img of p.images" [src]="img" />
+      </div>
+      <strong>Status: </strong><em>{{p.status}}</em><br>
+      <strong>Technologies: </strong><em>{{arrayToString(p.technologies)}}</em><br>
+      <strong>Project type: </strong><em>{{p.type}}</em><br>
+      <p><strong>Summary: </strong>{{p.summary}}</p>
+      <span *ngIf="p.url !== ''"><strong>Url: </strong>
+        <a  [href]="p.url" target="_blank">{{p.url}}</a>
+        <!--*ngIf="p.url.indexOf('http') > -1" <a *ngIf="p.url.indexOf('http') === -1" (click)="changePage(p.url.replace('#', ''), $event)" [href]="p.url">{{p.url}}</a>-->
+      </span>
+    </div>

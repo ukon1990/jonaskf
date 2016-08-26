@@ -53,7 +53,7 @@
         <div class="skill-programming">
             <div class="skill" *ngFor="let p of skills.tools">
                 <div class="clear-both">
-                    <img class="logo float-left" [src]="p.icon" />
+                    <img class="logo float-left" [src]="p.icon" [alt]="p.name"/>
                     <div class="float-left">
                         <em>{{p.name}}</em>
                         <br>
@@ -66,7 +66,7 @@
         <div class="skill-programming">
             <div class="skill" *ngFor="let p of skills.os">
                 <div class="clear-both">
-                    <img class="logo float-left" [src]="p.icon" />
+                    <img class="logo float-left" [src]="p.icon"  [alt]="p.name"/>
                     <div class="float-left">
                         <em>{{p.name}}</em>
                         <br>
@@ -79,7 +79,7 @@
         <div class="skill-programming">
             <div class="skill" *ngFor="let p of skills.languages">
                 <div class="clear-both">
-                    <img class="logo float-left" [src]="p.icon" />
+                    <img class="logo float-left" [src]="p.icon"  [alt]="p.name"/>
                     <div class="float-left">
                         <em>{{p.name}}</em>
                         <br> {{p.rating}}

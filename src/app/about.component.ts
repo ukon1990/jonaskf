@@ -16,6 +16,7 @@ export class AboutComponent {
 
   cv = {};
   skills = {};
+  education = {};
   year = new Date().getFullYear();
 
   constructor(private router: Router, private aboutService: AboutService){}
@@ -25,6 +26,7 @@ export class AboutComponent {
         cv => {
           this.cv = cv
           this.skills = cv.skills
+          this.education = cv.education;
         },
         error => console.log(error)
       );

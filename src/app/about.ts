@@ -4,5 +4,6 @@ export class About{
     nationality: string;
     occupation: string;
     company: string;
+    education: [Object];
     skills: [Object];
 }

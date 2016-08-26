@@ -3,10 +3,17 @@
     "additionalName": "Kossai",
     "familyName": "Flønes",
     "mail": "mail@jonaskf.net",
-    "nationality": "Norwegian",
-    "occupation": "Freelance web developer",
+    "nationality": "Norway",
+    "occupation": "jobseeker",
     "github": "https://github.com/ukon1990/",
+    "linkedin": "https://no.linkedin.com/in/jonas-kossai-flønes-07b68595",
     "company": "Østfold University College",
+    "education": {
+      "degree": "bachelor",
+      "institution": "Østfold University College",
+      "graduationYear": 2016,
+      "education": "information systems"
+    },
     "skills": {
         "programming":[
             {
@@ -78,6 +85,14 @@
                 "name": "C",
                 "icon":"icons/skill/c.svg",
                 "fromYear": 2015,
+                "rating": 1,
+                "subSkill": [
+
+                ]
+            },{
+                "name": "Python",
+                "icon":"icons/skill/python.svg",
+                "fromYear": 2016,
                 "rating": 1,
                 "subSkill": [
 

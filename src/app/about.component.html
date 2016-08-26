@@ -1,7 +1,7 @@
 <h2>{{title}}</h2>
 <div itemscope itemtype="http://schema.org/Person">
     <div class="cv-left portrait">
-        <img src="img/moi-300x265.jpg" />
+        <img src="img/moi-300x265.jpg" alt="Jonas Kossai Flønes"/>
     </div>
     <div class="cv-left about-me-content">
         <p>
@@ -34,7 +34,7 @@
         <div class="skill-programming">
             <div class="skill" *ngFor="let p of skills.programming">
                 <div class="clear-both">
-                    <img class="logo float-left" [src]="p.icon" />
+                    <img class="logo float-left" [src]="p.icon" [alt]="p.name"/>
                     <div class="float-left">
                         <em>{{p.name}}</em>
                         <br> In year {{year - p.fromYear + 1}} -

@@ -30,6 +30,6 @@ export class AboutComponent {
         },
         error => console.log(error)
       );
-    this.router.navigate(['/about']);
+    this.router.navigate(['/']);
   }
 }

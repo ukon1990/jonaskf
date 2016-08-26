@@ -40,7 +40,7 @@
                 "subSkill": []
             },{
                 "name": "Angular 2",
-                "icon":"icons/skill/javascript.svg",
+                "icon":"icons/skill/angular.svg",
                 "fromYear": 2016,
                 "rating": 3
             },{

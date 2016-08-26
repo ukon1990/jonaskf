@@ -4,7 +4,7 @@ import {ProjectComponent} from './project.component';
 import {DownloadComponent} from './download.component';
 
 const routes: RouterConfig= [
-  {path: 'about', component: AboutComponent},
+  {path: '', component: AboutComponent},
   {path: 'projects', component: ProjectComponent},
   {path: 'downloads', component: DownloadComponent},
   {path: 'downloads/:id', component: DownloadComponent},

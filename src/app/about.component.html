@@ -15,29 +15,21 @@
         <p>
             I am currently a
             <span itemprop="jobTitle">{{cv.occupation}}</span>, and do some freelance work every now and then.
-            You can find all of the development projects that I have worked on, in the "project" section of the website.
+            You can find all of the development projects that I have worked on, in the "projects" section of the website.
             Some of the code is available on <a [href]="cv.github" target="_blank">GitHub</a>. You can also find me on
             <a [href]="cv.linkedin">Linkedin</a>.
         </p>
         <p>
-            What I liked the most form my education 
+            What I liked the most from my education, were the Software Engineering, Information architecture, Operating Systems with Linux and programming courses.
+            The programming courses were Introduction to programming, Android development, OOP (with Java), Web development and game development (C# & Unity3D).
+        </p>
+        <p>
+          Below you can see some of the skills that I have acquired.
+          A rating of 1 star indicates that I know the basic concepts of the skill, but haven't really done much other than learning it.
+          The 3 star rating would indicate that I have done a couple projects, utelizing this skill (paid or for my own enjoyment).
+          A 5 star rating would indicate that I feel as if I have mastered the skill, at a professional level(as a paid professional).
         </p>
 
-        <div class="cv-left about-me-title">Name: </div>
-        <div class="cv-left name" itemprop="givenName">{{cv.givenName}}</div>
-        <div class="cv-left name" itemprop="additionalName">{{cv.additionalName}}</div>
-        <div class="cv-left name" itemprop="familyName">{{cv.familyName}}</div>
-        <div class="cv-left about-me-title">Mail: </div>
-        <div class="cv-left " itemprop="email"><a href="mailto:{{cv.mail}}">{{cv.mail}}</a></div>
-        <div class="cv-left about-me-title">GitHub: </div>
-        <div class="cv-left " itemprop="jobTitle"><a [href]="cv.github" target="_blank">{{cv.github}}</a></div>
-        <div class="cv-left about-me-title">Nationality: </div>
-        <div class="cv-left " itemprop="nationality">{{cv.nationality}}</div>
-        <div class="cv-left about-me-title">Occupation: </div>
-        <div class="cv-left " itemprop="jobTitle">{{cv.occupation}}</div>
-        <div class="cv-left about-me-title">Company: </div>
-        <div class="cv-left " itemprop="worksFor">{{cv.company}}</div>
-        <p class="cv-left clear-both">The star ratings used below, indicates my self-confidence in the subject.</p>
         <div class="cv-left about-me-title">Programming: </div>
         <div class="skill-programming">
             <div class="skill" *ngFor="let p of skills.programming">

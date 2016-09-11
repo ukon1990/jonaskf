@@ -1,7 +1,7 @@
 import {provideRouter, RouterConfig} from '@angular/router';
-import {AboutComponent} from './about.component';
-import {ProjectComponent} from './project.component';
-import {DownloadComponent} from './download.component';
+import {AboutComponent} from './about/about.component';
+import {ProjectComponent} from './projects/project.component';
+import {DownloadComponent} from './download/download.component';
 
 const routes: RouterConfig= [
   {path: '', component: AboutComponent},

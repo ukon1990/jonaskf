@@ -7,7 +7,6 @@ import {HTTP_PROVIDERS} from '@angular/http';
   moduleId: module.id,
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css'],
   encapsulation: ViewEncapsulation.None,
   directives: [NgClass, ROUTER_DIRECTIVES],
   providers: [HTTP_PROVIDERS]

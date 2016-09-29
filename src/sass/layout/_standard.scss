@@ -176,10 +176,12 @@ header{
     float: right;
 }
 .portrait {
-    width: auto;
-}
-.portrait img {
-    height: auto;
+  width: auto;
+  height: 15em;
+  border-radius: 7.5em;
+  -webkit-border-radius: 7.5em;
+  -moz-border-radius: 7.5em;
+  padding: 1em;
 }
 .about-me-content {
     margin-left: 2em;

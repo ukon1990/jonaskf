@@ -180,12 +180,15 @@ header {
   float: right; }
 
 .portrait {
-  width: auto;
+  float: left;
+  width: 15em;
   height: 15em;
-  border-radius: 7.5em;
-  -webkit-border-radius: 7.5em;
-  -moz-border-radius: 7.5em;
-  padding: 1em; }
+  border-radius: 8em;
+  -webkit-border-radius: 8em;
+  -moz-border-radius: 8em;
+  margin: 1em;
+  background: url("img/moi-300x265.jpg") no-repeat;
+  background-size: cover; }
 
 .about-me-content {
   margin-left: 2em;
